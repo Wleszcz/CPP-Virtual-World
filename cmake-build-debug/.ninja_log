@@ -1,0 +1,13 @@
+# ninja log v5
+4	593	6714911420195272	CMakeFiles/untitled.dir/main.cpp.obj	5d3ae82ab98b2bc3
+2	259	6714912832858890	build.ninja	d143836be0529563
+4	117	6714887991990381	CMakeFiles/untitled.dir/Punkt.cpp.obj	5676082f49f68c23
+4	628	6714905533849532	CMakeFiles/untitled.dir/Swiat.cpp.obj	da46620641fbf4a4
+5	589	6714911076505381	CMakeFiles/untitled.dir/Plansza.cpp.obj	94cce9eae8684a09
+4	660	6714893766062315	CMakeFiles/untitled.dir/Organizmy/Zwierze.cpp.obj	2838f417275622df
+34	1018	6714893469129275	CMakeFiles/untitled.dir/Organizmy/Roslina.cpp.obj	7dfdba5cc2add0c3
+24	1005	6714893468979370	CMakeFiles/untitled.dir/Organizmy/Organizm.cpp.obj	e27f8314dff498ab
+4	898	6714884656594070	CMakeFiles/untitled.dir/Organizmy/Czlowiek.cpp.obj	8f0ab0510e52ee72
+593	811	6714911422197413	untitled.exe	1d51fb5f48ba5acf
+4	632	6714903650096723	CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Wilk.cpp.obj	9c843ab4c85e50ca
+12	637	6714903650194667	CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Owca.cpp.obj	76e1b5e967fd1ba8
