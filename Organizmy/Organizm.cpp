@@ -5,15 +5,11 @@
 #include "Organizm.h"
 #include "../Punkt.h"
 
-Organizm::Organizm(int x,int y,int sila, int inicjatywa,char symbol) {
-    this->inicjatywa = inicjatywa;
-    this->sila = sila;
-    this->symbol=symbol;
-    this->polozenie = new Punkt(x, y);
+int Organizm::getX() {
+    return polozenie->getX();
 }
-
-Punkt* Organizm::Pozycja() {
-    return polozenie;
+int Organizm::getY() {
+    return polozenie->getX();
 }
 
 char Organizm::getSymbol() {
@@ -22,3 +18,8 @@ char Organizm::getSymbol() {
 void Organizm::starzejSie(){
     wiek++;
 }
+void Organizm::ruch(int x, int y) {
+    polozenie->setX(x);
+    polozenie->setY(y);
+}
+

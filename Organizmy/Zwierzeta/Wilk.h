@@ -13,6 +13,13 @@ class Wilk:
 {
 public:
     Wilk(int x, int y);
+    Wilk();
+
+    Organizm *Konstuktor() override;
+
+    void akcja(Swiat *swiat) override;
+
+    void kolizja(Swiat *swiat) override;
 };
 
 

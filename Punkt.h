@@ -11,9 +11,9 @@ protected:
     int x,y;
 
 public:
+    Punkt();
     Punkt(int x, int y);
 
-    Punkt();
 
     void setX(int x);
 

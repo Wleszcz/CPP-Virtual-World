@@ -16,11 +16,15 @@ public:
     Plansza(int x, int y);
     void PostawOrganizm(Organizm* organizm);
     void RysujPlansze();
+    bool poprawnyRuch(int,int);
+    bool poprawnoscAkcji(int x, int y);
 
 private:
     int x;
     int y;
-    char** pola;
+    Organizm*** pola;
+
+
 };
 
 #endif //UNTITLED_PLANSZA_H

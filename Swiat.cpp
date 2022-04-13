@@ -15,6 +15,8 @@ void Swiat::rysujSwiat() {
 void Swiat::wykonajTure() {
 
     for (int i = 0; i < organizmy.size(); ++i) {
+        //organizmy[i]->akcja(Swiat);
+
         organizmy[i]->starzejSie();
     }
 }

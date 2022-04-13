@@ -11,9 +11,6 @@ class Zwierze :
 {
 
 public:
-    Zwierze(int x,int y, int sila, int inicjatywa,char symbol);
-
-    void ruch(int x,int y);
 
     void akcja(Swiat *swiat) override;
 

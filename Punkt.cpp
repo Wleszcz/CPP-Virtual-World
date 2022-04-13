@@ -21,4 +21,7 @@ void Punkt::setX(int x) {
         return y;
     }
 
+Punkt::Punkt() {
+}
+
 

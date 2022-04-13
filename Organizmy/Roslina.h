@@ -11,11 +11,14 @@ class Roslina :
         public Organizm
 {
 public:
-    Roslina(int x,int y,int sila,char symbol);
+    //Roslina(int x,int y,int sila,char symbol);
 
     void akcja(Swiat *swiat) override;
 
     void kolizja(Swiat *swiat) override;
+
+private:
+    void rozmnozSie(Swiat* swiat);
 };
 
 

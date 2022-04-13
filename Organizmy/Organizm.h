@@ -13,20 +13,22 @@ class Organizm
 {
 
 protected:
-    int sila,inicjatywa,wiek;
+    int sila,inicjatywa,wiek=0;
     char symbol;
-
-    Organizm(int x,int y ,int sila, int incjatywa,char symbol);
 
 public:
     Punkt* polozenie;
     virtual void akcja(Swiat *swiat)=0;
     virtual void kolizja(Swiat* swiat)=0;
-    virtual void starzejSie()=0;
+    void starzejSie();
+    virtual Organizm* Konstuktor()=0;
+
+    void ruch(int x,int y);
 
     //void rysowanie();
     char getSymbol();
-    Punkt* Pozycja();
+    int getX();
+    int getY();
 };
 
 #endif //UNTITLED_ORGANIZM_H

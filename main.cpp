@@ -4,6 +4,7 @@
 #include "Organizmy/Roslina.h"
 #include "Organizmy/Zwierzeta/Owca.h"
 #include "Organizmy/Zwierzeta/Wilk.h"
+#include "Organizmy/Rosliny/Trawa.h"
 
 
 int main() {
@@ -12,9 +13,14 @@ int main() {
 
 
     swiat.dodajOrganizm(new Owca(0,0));
-    swiat.dodajOrganizm(new Wilk(20,20));
+    swiat.dodajOrganizm(new Wilk(19,19));
+    swiat.dodajOrganizm(new Trawa(9,9));
 
-    swiat.rysujSwiat();
+    for (int i = 0; i < 4; ++i) {
+        swiat.wykonajTure();
+        swiat.rysujSwiat();
+    }
+
     return 0;
 
 }

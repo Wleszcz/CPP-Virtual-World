@@ -114,8 +114,8 @@ build CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Owca.cpp.obj: CXX_COMPILER__un
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\Organizmy\Zwierzeta
 
-build CMakeFiles/untitled.dir/Organizmy/Rosliny/trawa.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/wikto/CLionProjects/untitled/Organizmy/Rosliny/trawa.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles\untitled.dir\Organizmy\Rosliny\trawa.cpp.obj.d
+build CMakeFiles/untitled.dir/Organizmy/Rosliny/Trawa.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/wikto/CLionProjects/untitled/Organizmy/Rosliny/Trawa.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\Organizmy\Rosliny\Trawa.cpp.obj.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\Organizmy\Rosliny
@@ -128,7 +128,7 @@ build CMakeFiles/untitled.dir/Organizmy/Rosliny/trawa.cpp.obj: CXX_COMPILER__unt
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/Organizmy/Organizm.cpp.obj CMakeFiles/untitled.dir/Plansza.cpp.obj CMakeFiles/untitled.dir/Punkt.cpp.obj CMakeFiles/untitled.dir/Organizmy/Roslina.cpp.obj CMakeFiles/untitled.dir/Swiat.cpp.obj CMakeFiles/untitled.dir/Organizmy/Zwierze.cpp.obj CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Wilk.cpp.obj CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Owca.cpp.obj CMakeFiles/untitled.dir/Organizmy/Rosliny/trawa.cpp.obj
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/Organizmy/Organizm.cpp.obj CMakeFiles/untitled.dir/Plansza.cpp.obj CMakeFiles/untitled.dir/Punkt.cpp.obj CMakeFiles/untitled.dir/Organizmy/Roslina.cpp.obj CMakeFiles/untitled.dir/Swiat.cpp.obj CMakeFiles/untitled.dir/Organizmy/Zwierze.cpp.obj CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Wilk.cpp.obj CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Owca.cpp.obj CMakeFiles/untitled.dir/Organizmy/Rosliny/Trawa.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir
