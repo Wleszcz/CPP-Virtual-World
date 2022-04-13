@@ -13,12 +13,12 @@ class Roslina :
 public:
     //Roslina(int x,int y,int sila,char symbol);
 
-    void akcja(Swiat *swiat) override;
+    void akcja() override;
 
-    void kolizja(Swiat *swiat) override;
+    void kolizja() override;
 
 private:
-    void rozmnozSie(Swiat* swiat);
+    void rozmnozSie();
 };
 
 

@@ -14,9 +14,11 @@ class Plansza;
 
 class Swiat{
 protected:
-    std::vector <Organizm*> organizmy;
+
 
 public:
+    std::vector <Organizm*> organizmy;
+
     Swiat(int x, int y);
     Plansza* plansza;
 

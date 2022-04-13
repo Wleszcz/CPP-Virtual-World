@@ -19,7 +19,8 @@ void Organizm::starzejSie(){
     wiek++;
 }
 void Organizm::ruch(int x, int y) {
-    polozenie->setX(x);
-    polozenie->setY(y);
+
+    this->polozenie->setX(x);
+    this->polozenie->setY(y);
 }
 

@@ -6,23 +6,28 @@
 Owca::Owca() {
     polozenie=new Punkt();
 }
+Owca::Owca(Swiat* swiat) {
+    polozenie=new Punkt();
+    this->swiat=swiat;
+}
 
-Owca::Owca(int x, int y){
+Owca::Owca(Swiat* swiat,int x, int y){
+    this->swiat=swiat;
     polozenie=new Punkt(x,y);
     this->sila=4;
     this->inicjatywa=4;
     this->symbol='o';
 }
 
-Organizm *Owca::Konstuktor() {
-    return new Owca();
+Organizm *Owca::Konstuktor(int x,int y) {
+    return new Owca(swiat,x, y);
 }
 
-void Owca::akcja(Swiat *swiat) {
-    Zwierze::akcja(swiat);
+void Owca::akcja() {
+    Zwierze::akcja();
 }
 
-void Owca::kolizja(Swiat *swiat) {
-    Zwierze::kolizja(swiat);
+void Owca::kolizja() {
+    Zwierze::kolizja();
 }
 

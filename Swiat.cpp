@@ -4,8 +4,10 @@
 
 #include "Swiat.h"
 
+
+
 Swiat::Swiat(int x, int y) {
-    plansza = new Plansza(int (x), int (y));
+    plansza = new Plansza(x,y);
 }
 
 void Swiat::rysujSwiat() {
@@ -13,16 +15,20 @@ void Swiat::rysujSwiat() {
 }
 
 void Swiat::wykonajTure() {
+    plansza->AktualizujPlansze(organizmy);
 
     for (int i = 0; i < organizmy.size(); ++i) {
-        //organizmy[i]->akcja(Swiat);
-
+        plansza->PostawOrganizm(organizmy[i]);
+        organizmy[i]->akcja();
         organizmy[i]->starzejSie();
     }
+
+    rysujSwiat();
 }
 
 void Swiat::dodajOrganizm(Organizm *organizm) {
     organizmy.push_back(organizm);
     plansza->PostawOrganizm(organizm);
+    plansza->AktualizujPlansze(organizmy);
 }
 

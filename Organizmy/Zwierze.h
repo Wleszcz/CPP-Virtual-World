@@ -12,9 +12,9 @@ class Zwierze :
 
 public:
 
-    void akcja(Swiat *swiat) override;
+    void akcja() override;
 
-    void kolizja(Swiat *swiat) override;
+    void kolizja() override;
 
 
 };

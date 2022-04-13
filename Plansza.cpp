@@ -27,17 +27,46 @@ void Plansza::PostawOrganizm(Organizm* organizm) {
 }
 
 
-void Plansza::RysujPlansze() {
+void Plansza::AktualizujPlansze(std::vector<Organizm *> organizmy) {
     for (int i = 0; i < x; i++) {
         for (int j = 0; j < y; j++) {
+            pola[i][j]= nullptr;
+        }
+    }
+    for (int i = 0; i < organizmy.size(); ++i) {
+            pola[organizmy[i]->getX()][organizmy[i]->getY()]=organizmy[i];
+    }
+}
+
+void Plansza::RysujPlansze() {
+    for (int i = 0; i < x/2+1; ++i) {
+        std::cout<<" _";
+    }
+    std::cout<<std::endl;
+    for (int i = 0; i < x; i++) {
+        for (int j = 0; j < y; j++) {
+
+            if(j==0){
+                std::cout<<'|';
+            }
+
             if(pola[i][j]!= nullptr) {
                 char symbol = pola[i][j]->getSymbol();
                 std::cout << symbol;
             }
             else std::cout<<' ';
+
+            if(j==x-1){
+                std::cout<<'|';
+            }
         }
+
         std::cout<<std::endl;
     }
+    for (int i = 0; i < x/2 + 1; ++i) {
+        std::cout<<" -";
+    }
+    std::cout<<std::endl<<std::endl;
 }
 
 bool Plansza::poprawnyRuch(int x, int y) {

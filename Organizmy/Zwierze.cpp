@@ -4,10 +4,10 @@
 
 #include "Zwierze.h"
 
-void Zwierze::akcja(Swiat *swiat) {
+void Zwierze::akcja() {
 
 }
 
-void Zwierze::kolizja(Swiat *swiat) {
+void Zwierze::kolizja() {
 
 }

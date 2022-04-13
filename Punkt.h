@@ -6,6 +6,8 @@
 #ifndef UNTITLED_PUNKT_H
 #define UNTITLED_PUNKT_H
 
+
+
 class Punkt {
 protected:
     int x,y;

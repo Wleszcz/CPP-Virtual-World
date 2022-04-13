@@ -8,6 +8,9 @@ Punkt::Punkt(int x,int y) {
 this->x=x;
 this->y=y;
 }
+Punkt::Punkt() {
+}
+
 void Punkt::setX(int x) {
         this->x = x;
     }
@@ -21,7 +24,6 @@ void Punkt::setX(int x) {
         return y;
     }
 
-Punkt::Punkt() {
-}
+
 
 

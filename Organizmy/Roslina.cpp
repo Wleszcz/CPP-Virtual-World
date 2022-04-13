@@ -5,56 +5,53 @@
 //
 #include "Roslina.h"
 
-void Roslina::akcja(Swiat *swiat) {
+void Roslina::akcja() {
 int szansa = rand() % 3;
-if (szansa == 0) {
-    rozmnozSie(swiat);
+if (this->wiek != 0) {
+    rozmnozSie();
 }
 }
 
-void Roslina::kolizja(Swiat *swiat) {
+void Roslina::kolizja() {
 
 }
 
-void Roslina::rozmnozSie(Swiat* swiat) {
+void Roslina::rozmnozSie() {
     int x = this->getX();
     int y = this->getY();
 
     while (1) {
-        int pole = rand() % 7;
+        int pole = rand() % 8;
 
-        switch (pole) {
-            case 0:
-                x = x-1;
-                y= y-1;
-            case 1:
-                y=y-1;
-            case 2:
-                x=x+1;
-                y=y-1;
-            case 3:
-                x=x-1;
-            case 4:
-                x=x+1;
-            case 5:
-                x=x-1;
-                y=y+1;
-            case 6:
-                y=y+1;
-            case 7:
-                x=x+1;
-                y=y+1;
+        if (pole == 0) {
+            x = x - 1;
+            y = y - 1;
+        } else if (pole == 1) {
+            y = y - 1;
+        } else if (pole == 2) {
+            x = x + 1;
+            y = y - 1;
+        } else if (pole == 3) {
+            x = x - 1;
+        } else if (pole == 4) {
+            x = x + 1;
+        } else if (pole == 5) {
+            x = x - 1;
+            y = y + 1;
+        } else if (pole == 6) {
+            y = y + 1;
+        } else if (pole == 7) {
+            x = x + 1;
+            y = y + 1;
         }
-        if (swiat->plansza->poprawnyRuch(x,y)) {
+        if(swiat->plansza->poprawnyRuch(x,y)){
             break;
         }
-
     }
-    if(swiat->plansza->poprawnoscAkcji(x,y)){
-        Organizm* organizm = this->Konstuktor();
-        organizm->ruch(x,y);
+    if (swiat->plansza->poprawnoscAkcji(x, y)) {
+        Organizm *organizm = this->Konstuktor(x,y);
+
+        swiat->dodajOrganizm(organizm);
+
     }
 }
-
-
-

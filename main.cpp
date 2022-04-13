@@ -5,6 +5,10 @@
 #include "Organizmy/Zwierzeta/Owca.h"
 #include "Organizmy/Zwierzeta/Wilk.h"
 #include "Organizmy/Rosliny/Trawa.h"
+#include <stdio.h>      /* printf, scanf, puts, NULL */
+#include <cstdlib>     /* srand, rand */
+#include <ctime>       /* time */
+
 
 
 int main() {
@@ -12,15 +16,17 @@ int main() {
     //swiat.rysujSwiat();
 
 
-    swiat.dodajOrganizm(new Owca(0,0));
-    swiat.dodajOrganizm(new Wilk(19,19));
-    swiat.dodajOrganizm(new Trawa(9,9));
+    srand(std::time(nullptr));
 
-    for (int i = 0; i < 4; ++i) {
+    swiat.dodajOrganizm(new Owca(&swiat,0,0));
+    swiat.dodajOrganizm(new Wilk(&swiat,19,19));
+    swiat.dodajOrganizm(new Trawa(&swiat,9,9));
+
+    for (int i = 0; i < 2; ++i) {
         swiat.wykonajTure();
-        swiat.rysujSwiat();
-    }
 
+    }
+    swiat.wykonajTure();
     return 0;
 
 }

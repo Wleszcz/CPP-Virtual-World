@@ -11,13 +11,14 @@ class Owca :
 
 {
 public:
-    Owca(int x,int y);
+    Owca(Swiat* swiat,int x,int y);
+    Owca(Swiat* swiat);
     Owca();
 
-    Organizm *Konstuktor() override;
+    Organizm *Konstuktor(int x,int y) override;
 
-    void akcja(Swiat *swiat) override;
+    void akcja() override;
 
-    void kolizja(Swiat *swiat) override;
+    void kolizja() override;
 };
 #endif //UNTITLED_OWCA_H

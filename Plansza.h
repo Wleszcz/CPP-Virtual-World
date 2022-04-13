@@ -16,8 +16,11 @@ public:
     Plansza(int x, int y);
     void PostawOrganizm(Organizm* organizm);
     void RysujPlansze();
+    void AktualizujPlansze(std::vector<Organizm *> vector);
+
     bool poprawnyRuch(int,int);
     bool poprawnoscAkcji(int x, int y);
+
 
 private:
     int x;

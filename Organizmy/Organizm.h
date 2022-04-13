@@ -17,11 +17,12 @@ protected:
     char symbol;
 
 public:
+    Swiat* swiat;
     Punkt* polozenie;
-    virtual void akcja(Swiat *swiat)=0;
-    virtual void kolizja(Swiat* swiat)=0;
+    virtual void akcja()=0;
+    virtual void kolizja()=0;
     void starzejSie();
-    virtual Organizm* Konstuktor()=0;
+    virtual Organizm* Konstuktor(int x,int y)=0;
 
     void ruch(int x,int y);
 

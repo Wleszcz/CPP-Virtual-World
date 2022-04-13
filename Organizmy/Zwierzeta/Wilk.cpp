@@ -7,7 +7,12 @@
 Wilk::Wilk() {
     polozenie=new Punkt();
 };
-Wilk::Wilk(int x, int y){
+Wilk::Wilk(Swiat* swiat){
+    polozenie=new Punkt();
+    this->swiat=swiat;
+}
+
+Wilk::Wilk(Swiat* swiat,int x, int y){
         polozenie=new Punkt(x,y);
         this->inicjatywa=5;
         this->sila=9;
@@ -16,15 +21,15 @@ Wilk::Wilk(int x, int y){
 
     }
 
-Organizm *Wilk::Konstuktor() {
-    return new Wilk;
+Organizm *Wilk::Konstuktor(int x,int y) {
+    return new Wilk(swiat,x,y);
 }
 
-void Wilk::akcja(Swiat *swiat) {
-    Zwierze::akcja(swiat);
+void Wilk::akcja() {
+    Zwierze::akcja();
 }
 
-void Wilk::kolizja(Swiat *swiat) {
-    Zwierze::kolizja(swiat);
+void Wilk::kolizja() {
+    Zwierze::kolizja();
 }
 

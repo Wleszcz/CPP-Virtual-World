@@ -13,15 +13,15 @@ class Trawa:
 {
 public:
     Trawa();
-    Trawa(int x, int y, int sila, char symbol);
+    Trawa(Swiat* swiat);
+    Trawa(Swiat* swiat,int x, int y);
+    Organizm *Konstuktor(int x,int y) override;
 
-    Organizm *Konstuktor() override;
+    void akcja() override;
 
-    void akcja(Swiat *swiat) override;
+    void kolizja() override;
 
-    void kolizja(Swiat *swiat) override;
 
-    Trawa(int x, int y);
 };
 
 

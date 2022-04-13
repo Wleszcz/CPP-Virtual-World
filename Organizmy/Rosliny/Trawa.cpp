@@ -6,24 +6,29 @@
 Trawa::Trawa(){
     polozenie=new Punkt();
 }
-Trawa::Trawa(int x, int y){
+Trawa::Trawa(Swiat* swiat){
+    polozenie= new Punkt();
+    this->swiat=swiat;
+}
+Trawa::Trawa(Swiat* swiat,int x, int y){
     polozenie=new Punkt(x,y);
+    this->swiat=swiat;
     this->sila=0;
     this->symbol='#';
 }
 
 
-void Trawa::akcja(Swiat *swiat) {
-    Roslina::akcja(swiat);
+void Trawa::akcja() {
+    Roslina::akcja();
 }
 
-void Trawa::kolizja(Swiat *swiat) {
-    Roslina::kolizja(swiat);
+void Trawa::kolizja() {
+    Roslina::kolizja();
 }
 
 
 
-Organizm *Trawa::Konstuktor()
+Organizm *Trawa::Konstuktor(int x,int y)
 {
-    return new Trawa;
+    return new Trawa(swiat,x,y);
 }
