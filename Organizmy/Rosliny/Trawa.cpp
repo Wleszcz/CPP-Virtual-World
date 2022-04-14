@@ -6,10 +6,6 @@
 Trawa::Trawa(){
     polozenie=new Punkt();
 }
-Trawa::Trawa(Swiat* swiat){
-    polozenie= new Punkt();
-    this->swiat=swiat;
-}
 Trawa::Trawa(Swiat* swiat,int x, int y){
     polozenie=new Punkt(x,y);
     this->swiat=swiat;

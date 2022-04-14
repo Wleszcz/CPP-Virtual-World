@@ -17,7 +17,7 @@ public:
 
     void kolizja() override;
 
-private:
+protected:
     void rozmnozSie();
 };
 

@@ -1,19 +1,21 @@
 //
-// Created by wikto on 12.04.2022.
+// Created by Wiktor on 14.04.2022.
 //
 
-#ifndef UNTITLED_TRAWA_H
-#define UNTITLED_TRAWA_H
+#ifndef UNTITLED_MLECZ_H
+#define UNTITLED_MLECZ_H
+
 
 
 #include "../Roslina.h"
 
-class Trawa:
+class Mlecz:
         public Roslina
 {
 public:
-    Trawa();
-    Trawa(Swiat* swiat,int x, int y);
+    Mlecz();
+    Mlecz(Swiat* swiat,int x, int y);
+
     Organizm *Konstuktor(int x,int y) override;
 
     void akcja() override;
@@ -25,5 +27,5 @@ public:
 
 
 
+#endif //UNTITLED_MLECZ_H
 
-#endif //UNTITLED_TRAWA_H

@@ -18,7 +18,6 @@ void Swiat::wykonajTure() {
     plansza->AktualizujPlansze(organizmy);
 
     for (int i = 0; i < organizmy.size(); ++i) {
-        plansza->PostawOrganizm(organizmy[i]);
         organizmy[i]->akcja();
         organizmy[i]->starzejSie();
     }
@@ -28,7 +27,7 @@ void Swiat::wykonajTure() {
 
 void Swiat::dodajOrganizm(Organizm *organizm) {
     organizmy.push_back(organizm);
-    plansza->PostawOrganizm(organizm);
+
     plansza->AktualizujPlansze(organizmy);
 }
 

@@ -6,10 +6,7 @@
 #include "Roslina.h"
 
 void Roslina::akcja() {
-int szansa = rand() % 3;
-if (this->wiek != 0) {
     rozmnozSie();
-}
 }
 
 void Roslina::kolizja() {
@@ -17,10 +14,13 @@ void Roslina::kolizja() {
 }
 
 void Roslina::rozmnozSie() {
+    int szansa = rand() % 4;
+    if (this->wiek != 0 && szansa == 0) {
+
     int x = this->getX();
     int y = this->getY();
 
-    while (1) {
+    while (true) {
         int pole = rand() % 8;
 
         if (pole == 0) {
@@ -54,4 +54,5 @@ void Roslina::rozmnozSie() {
         swiat->dodajOrganizm(organizm);
 
     }
+}
 }

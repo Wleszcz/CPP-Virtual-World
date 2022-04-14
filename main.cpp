@@ -16,7 +16,7 @@ int main() {
     //swiat.rysujSwiat();
 
 
-    srand(std::time(nullptr));
+    std::srand(std::time(nullptr));
 
     swiat.dodajOrganizm(new Owca(&swiat,0,0));
     swiat.dodajOrganizm(new Wilk(&swiat,19,19));

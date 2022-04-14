@@ -9,7 +9,7 @@ int Organizm::getX() {
     return polozenie->getX();
 }
 int Organizm::getY() {
-    return polozenie->getX();
+    return polozenie->getY();
 }
 
 char Organizm::getSymbol() {
