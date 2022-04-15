@@ -13,14 +13,11 @@ class Wilk:
 {
 public:
     Wilk(Swiat* swiat,int x, int y);
-    Wilk(Swiat* swiat);
     Wilk();
 
     Organizm *Konstuktor(int x,int y) override;
 
-    void akcja() override;
 
-    void kolizja() override;
 };
 
 

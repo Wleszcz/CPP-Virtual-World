@@ -20,8 +20,6 @@ public:
 
     void akcja() override;
 
-    void kolizja() override;
-
 
 };
 

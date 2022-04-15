@@ -4,6 +4,7 @@
 
 #include "Plansza.h"
 #include "Punkt.h"
+#include "Organizmy/Zwierze.h"
 
 Plansza::Plansza(int x, int y) {
     this->x = x;
@@ -34,30 +35,35 @@ void Plansza::AktualizujPlansze(std::vector<Organizm *> organizmy) {
         }
     }
     for (int i = 0; i < organizmy.size(); ++i) {
-            pola[organizmy[i]->getX()][organizmy[i]->getY()]=organizmy[i];
+        if(organizmy[i]->CzyZyje()) {
+            pola[organizmy[i]->getX()][organizmy[i]->getY()] = organizmy[i];
+        }
     }
 }
 
 void Plansza::RysujPlansze() {
+
+    std::cout<<std::endl;
     for (int i = 0; i < x/2+1; ++i) {
         std::cout<<" _";
     }
+
     std::cout<<std::endl;
-    for (int i = 0; i < x; i++) {
-        for (int j = 0; j < y; j++) {
+    for (int j = 0; j < y; j++) {
+        for (int i = 0; i < x; i++) {
 
-            if(j==0){
+            if(i==0){
                 std::cout<<'|';
             }
 
-            if(pola[i][j]!= nullptr) {
+            if(pola[i][j]!= nullptr ) {
                 char symbol = pola[i][j]->getSymbol();
-                std::cout << symbol;
+                std::cout <<symbol;
             }
-            else std::cout<<' ';
+            else std::cout<<" ";
 
-            if(j==x-1){
-                std::cout<<'|';
+            if(i==x-1){
+                std::cout<<'|'<<j;
             }
         }
 
@@ -66,19 +72,30 @@ void Plansza::RysujPlansze() {
     for (int i = 0; i < x/2 + 1; ++i) {
         std::cout<<" -";
     }
-    std::cout<<std::endl<<std::endl;
+    std::cout<<std::endl;
 }
 
 bool Plansza::poprawnyRuch(int x, int y) {
-    if(x>0 && x<this->x-1 && y>0 && y< this->y-1){
+    if(x>=0 && x < this->x && y>=0 && y < this->y){
         return true;
     }
     return false;
 }
-bool Plansza::poprawnoscAkcji(int x,int y){
+bool Plansza::CzyPusty(int x, int y){
     if(pola[x][y]== nullptr){
         return true;
     }
     return false;
+}
+
+bool Plansza::CzyMaZwierze(int x, int y){
+    if(Zwierze* t = dynamic_cast<Zwierze*>(getOrganizm(x,y))){
+        return true;
+    }
+    return false;
+}
+
+Organizm *Plansza::getOrganizm(int x, int y) {
+    return pola[x][y];
 }
 

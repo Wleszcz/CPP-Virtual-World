@@ -13,23 +13,37 @@ class Organizm
 {
 
 protected:
-    int sila,inicjatywa,wiek=0;
-    char symbol;
+    bool zywy=1;
+    int sila=0,inicjatywa=0,wiek=0;
+    char symbol='?';
+    std::string typ;
+    Punkt* polozenie;
 
 public:
     Swiat* swiat;
-    Punkt* polozenie;
     virtual void akcja()=0;
-    virtual void kolizja()=0;
-    void starzejSie();
+    virtual void kolizja(Organizm*)=0;
     virtual Organizm* Konstuktor(int x,int y)=0;
 
     void ruch(int x,int y);
+    void umrzyj();
+    void starzejSie();
+    void BonusSila();
 
-    //void rysowanie();
-    char getSymbol();
+
+    char getSymbol() const;
     int getX();
     int getY();
+    int getWiek() const;
+    int getSila() const;
+    bool CzyZyje() const;
+    int getInicjatywa() const;
+    std::string getTyp();
+
+    Punkt* losowePoleObok();
+
+    bool gotowy=true;
 };
+
 
 #endif //UNTITLED_ORGANIZM_H

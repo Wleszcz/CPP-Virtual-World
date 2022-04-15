@@ -15,12 +15,6 @@ public:
     Trawa();
     Trawa(Swiat* swiat,int x, int y);
     Organizm *Konstuktor(int x,int y) override;
-
-    void akcja() override;
-
-    void kolizja() override;
-
-
 };
 
 

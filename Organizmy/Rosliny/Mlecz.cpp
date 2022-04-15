@@ -8,11 +8,16 @@ Mlecz::Mlecz(Swiat *swiat, int x, int y) {
     polozenie=new Punkt(x,y);
     this->swiat=swiat;
     this->sila=0;
-    this->symbol='$';
+    this->symbol='m';
+    this->typ="Mlecz";
 }
 
 Mlecz::Mlecz() {
     polozenie= new Punkt();
+    this->swiat=swiat;
+    this->sila=0;
+    this->symbol='m';
+    this->typ="Mlecz";
 }
 
 Organizm *Mlecz::Konstuktor(int x, int y) {
@@ -24,3 +29,4 @@ void Mlecz::akcja() {
         rozmnozSie();
     }
 }
+

@@ -15,7 +15,8 @@ public:
 
     void akcja() override;
 
-    void kolizja() override;
+    void kolizja(Organizm *organizm) override;
+
 
 protected:
     void rozmnozSie();

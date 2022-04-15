@@ -14,17 +14,22 @@ class Plansza;
 
 class Swiat{
 protected:
+    int tura=0;
 
 
 public:
     std::vector <Organizm*> organizmy;
 
+
     Swiat(int x, int y);
     Plansza* plansza;
 
     void rysujSwiat();
+    void listaOrganizmow();
+    void listaZwierzat();
     void wykonajTure();
     void dodajOrganizm(Organizm* organizm);
+    void sortujOrganizmy();
 
 };
 

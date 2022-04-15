@@ -17,15 +17,18 @@ public:
     void PostawOrganizm(Organizm* organizm);
     void RysujPlansze();
     void AktualizujPlansze(std::vector<Organizm *> vector);
+    Organizm* getOrganizm(int x,int y);
 
+    bool CzyMaZwierze(int x, int y);
     bool poprawnyRuch(int,int);
-    bool poprawnoscAkcji(int x, int y);
+    bool CzyPusty(int x, int y);
 
 
 private:
     int x;
     int y;
     Organizm*** pola;
+
 
 
 };

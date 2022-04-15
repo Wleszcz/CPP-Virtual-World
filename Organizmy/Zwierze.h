@@ -9,14 +9,14 @@
 class Zwierze :
         public Organizm
 {
-
+private:
 public:
-
     void akcja() override;
+    bool polaObokZajete();
+    void kolizja(Organizm *organizm) override;
 
-    void kolizja() override;
 
-
+    void rozmnozSie();
 };
 
 

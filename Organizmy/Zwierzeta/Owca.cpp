@@ -3,12 +3,14 @@
 //
 
 #include "Owca.h"
+
 Owca::Owca() {
     polozenie=new Punkt();
-}
-Owca::Owca(Swiat* swiat) {
-    polozenie=new Punkt();
     this->swiat=swiat;
+    this->sila=4;
+    this->inicjatywa=4;
+    this->symbol='o';
+    this->typ="Owca";
 }
 
 Owca::Owca(Swiat* swiat,int x, int y){
@@ -17,17 +19,10 @@ Owca::Owca(Swiat* swiat,int x, int y){
     this->sila=4;
     this->inicjatywa=4;
     this->symbol='o';
+    this->typ="Owca";
 }
 
 Organizm *Owca::Konstuktor(int x,int y) {
     return new Owca(swiat,x, y);
-}
-
-void Owca::akcja() {
-    Zwierze::akcja();
-}
-
-void Owca::kolizja() {
-    Zwierze::kolizja();
 }
 
