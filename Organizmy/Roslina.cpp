@@ -40,3 +40,6 @@ void Roslina::rozmnozSie() {
     }
 }
 }
+bool Roslina::CzyOdbilAtak(Organizm *organizm) {
+    return false;
+}

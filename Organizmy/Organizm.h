@@ -24,6 +24,8 @@ public:
     virtual void akcja()=0;
     virtual void kolizja(Organizm*)=0;
     virtual Organizm* Konstuktor(int x,int y)=0;
+    virtual bool CzyOdbilAtak(Organizm* napastnik)=0;
+
 
     void ruch(int x,int y);
     void umrzyj();
@@ -43,6 +45,7 @@ public:
     Punkt* losowePoleObok();
 
     bool gotowy=true;
+
 };
 
 

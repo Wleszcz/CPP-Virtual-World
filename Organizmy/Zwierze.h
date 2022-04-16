@@ -14,7 +14,7 @@ public:
     void akcja() override;
     bool polaObokZajete();
     void kolizja(Organizm *organizm) override;
-
+    bool CzyOdbilAtak(Organizm *napastnik) override;
 
     void rozmnozSie();
 };

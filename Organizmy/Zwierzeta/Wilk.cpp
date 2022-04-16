@@ -10,7 +10,7 @@ Wilk::Wilk(){
     this->swiat=swiat;
     this->inicjatywa=5;
     this->sila=9;
-    this->symbol='w';
+    this->symbol='W';
     this->typ="Wilk";
 }
 
@@ -19,7 +19,7 @@ Wilk::Wilk(Swiat* swiat,int x, int y){
         this->swiat=swiat;
         this->inicjatywa=5;
         this->sila=9;
-        this->symbol='w';
+        this->symbol='W';
         this->typ="Wilk";
 
 

@@ -13,6 +13,7 @@ WilczeJagody::WilczeJagody(Swiat *swiat, int x, int y) {
 }
 
 void WilczeJagody::kolizja(Organizm *organizm) {
+    std::cout<<organizm->getTyp()<<" zatrul sie jagodami"<<std::endl;
     organizm->umrzyj();
     this->umrzyj();
     swiat->plansza->AktualizujPlansze(swiat->organizmy);

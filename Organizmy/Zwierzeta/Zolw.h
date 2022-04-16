@@ -16,7 +16,8 @@ public:
     Organizm *Konstuktor(int x,int y) override;
 
     void akcja() override;
-
     void kolizja(Organizm *organizm) override;
+
+    bool CzyOdbilAtak(Organizm* napastnik) override;
 };
 #endif //UNTITLED_ZOLW_H

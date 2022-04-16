@@ -30,6 +30,7 @@ public:
     void wykonajTure();
     void dodajOrganizm(Organizm* organizm);
     void sortujOrganizmy();
+    void usunMartwe();
 
 };
 

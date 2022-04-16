@@ -28,8 +28,9 @@ void Swiat::wykonajTure() {
     }
 
     //listaOrganizmow();
-    rysujSwiat();
     listaZwierzat();
+    rysujSwiat();
+
     tura++;
 }
 
@@ -71,6 +72,7 @@ void Swiat::listaZwierzat() {
 
 
 void Swiat::sortujOrganizmy() {
+    usunMartwe();
         int i, j;
         Organizm* key;
         for (i = 1; i < organizmy.size(); i++)
@@ -86,6 +88,22 @@ void Swiat::sortujOrganizmy() {
             organizmy[j + 1] = key;
         }
 
+}
+
+void Swiat::usunMartwe() {
+    int size = organizmy.size(),dead=0;
+    for (size_t i = 0; i < size; i++)
+    {
+        if (organizmy[i]->CzyZyje() == false) {
+            dead++;
+        }
+        else
+            organizmy[i - dead] = organizmy[i];
+    }
+    for (int i = 0; i < dead; i++)
+    {
+        organizmy.pop_back();
+    }
 }
 
 

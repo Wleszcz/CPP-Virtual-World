@@ -9,7 +9,7 @@ Lis::Lis() {
     this->swiat=swiat;
     this->sila=3;
     this->inicjatywa=7;
-    this->symbol='l';
+    this->symbol='L';
     this->typ="Lis";
 }
 
@@ -18,18 +18,21 @@ Lis::Lis(Swiat* swiat,int x, int y){
     polozenie=new Punkt(x,y);
     this->sila=3;
     this->inicjatywa=7;
-    this->symbol='l';
+    this->symbol='L';
     this->typ="Lis";
 }
 
 void Lis::akcja() {
     if (!(polaObokZajete())) {
         Punkt *pole = losowePoleObok();
-        if(swiat->plansza->getOrganizm(pole->getX(),pole->getY())!= nullptr) {
-            if (swiat->plansza->getOrganizm(pole->getX(), pole->getY())->getSila() < sila) {
+        if(!swiat->plansza->CzyPusty(pole->getX(),pole->getY())) {
+            if (swiat->plansza->getOrganizm(pole->getX(), pole->getY())->getSila() <= sila) {
                 ruch(pole->getX(), pole->getY());
                 swiat->plansza->AktualizujPlansze(swiat->organizmy);
             }
+        }
+        else{
+            ruch(pole->getX(), pole->getY());
         }
     }
 }

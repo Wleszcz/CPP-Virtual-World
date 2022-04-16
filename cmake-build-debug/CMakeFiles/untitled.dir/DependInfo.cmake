@@ -16,6 +16,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Wiktor/CLionProjects/PO_1/Organizmy/Rosliny/Trawa.cpp" "CMakeFiles/untitled.dir/Organizmy/Rosliny/Trawa.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Organizmy/Rosliny/Trawa.cpp.obj.d"
   "C:/Users/Wiktor/CLionProjects/PO_1/Organizmy/Rosliny/WilczeJagody.cpp" "CMakeFiles/untitled.dir/Organizmy/Rosliny/WilczeJagody.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Organizmy/Rosliny/WilczeJagody.cpp.obj.d"
   "C:/Users/Wiktor/CLionProjects/PO_1/Organizmy/Zwierze.cpp" "CMakeFiles/untitled.dir/Organizmy/Zwierze.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Organizmy/Zwierze.cpp.obj.d"
+  "C:/Users/Wiktor/CLionProjects/PO_1/Organizmy/Zwierzeta/Antylopa.cpp" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj.d"
+  "C:/Users/Wiktor/CLionProjects/PO_1/Organizmy/Zwierzeta/Czlowiek.cpp" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj.d"
   "C:/Users/Wiktor/CLionProjects/PO_1/Organizmy/Zwierzeta/Lis.cpp" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Lis.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Lis.cpp.obj.d"
   "C:/Users/Wiktor/CLionProjects/PO_1/Organizmy/Zwierzeta/Owca.cpp" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Owca.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Owca.cpp.obj.d"
   "C:/Users/Wiktor/CLionProjects/PO_1/Organizmy/Zwierzeta/Wilk.cpp" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Wilk.cpp.obj" "gcc" "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Wilk.cpp.obj.d"

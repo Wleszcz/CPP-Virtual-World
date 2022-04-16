@@ -11,27 +11,26 @@ void Zwierze::akcja() {
 }
 
 void Zwierze::kolizja(Organizm *organizm) {
-    //if(obronilSie( organizm))
-    if(typ==organizm->getTyp()){
-        if(organizm->getWiek()!=0 && this->gotowy && organizm->gotowy && !(this->polaObokZajete())) {
-            rozmnozSie();
-            gotowy = false;
-            organizm->gotowy = false;
+        if ((typ == organizm->getTyp())) {
+            if (organizm->getWiek() != 0 && this->gotowy && organizm->gotowy && !(this->polaObokZajete())) {
+                rozmnozSie();
+                gotowy = false;
+                organizm->gotowy = false;
+            }
+        } else {
+            if (getSila() > organizm->getSila()) {
+                organizm->umrzyj();
+                std::cout << organizm->getY() << " zostal zjedzony przez " << typ << std::endl;
+            } else if (getSila() < organizm->getSila()) {
+                umrzyj();
+                std::cout << typ << " zostal zjedzony przez " << organizm->getTyp() << std::endl;
+            } else {
+                umrzyj();
+                organizm->umrzyj();
+                std::cout << typ << " i " << organizm->getTyp() << " zjadly sie nawzajem" << std::endl;
+            }
         }
     }
-    else{
-        if(getSila()>organizm->getSila()){
-            organizm->umrzyj();
-        }
-        else if(getSila()<organizm->getSila()){
-            umrzyj();
-        }
-        else {
-            umrzyj();
-            organizm->umrzyj();
-        }
-    }
-}
 
 bool Zwierze::polaObokZajete(){
     bool zajete= true;
@@ -46,23 +45,33 @@ bool Zwierze::polaObokZajete(){
 }
 
 void Zwierze::rozmnozSie() {
-    int Kx,Ky,i=0;
+    int Kx, Ky, i = 0;
 
-    while(true) {
+    while (i < 20) {
         Punkt *pole = losowePoleObok();
         int x = pole->getX();
         int y = pole->getY();
         i++;
 
-        if (swiat->plansza->CzyPusty(x, y)) {
-            Kx=x;
-            Ky=y;
+        if (!swiat->plansza->CzyMaZwierze(x, y)) {
+            Kx = x;
+            Ky = y;
+            Organizm *organizm = this->Konstuktor(Kx, Ky);
+            swiat->dodajOrganizm(organizm);
             break;
         }
     }
-        Organizm *organizm = this->Konstuktor(Kx, Ky);
-        swiat->dodajOrganizm(organizm);
 }
+
+
+bool Zwierze::CzyOdbilAtak(Organizm *napastnik) {
+        if(napastnik->getSila() > sila){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 
 
 

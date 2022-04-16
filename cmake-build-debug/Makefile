@@ -320,6 +320,54 @@ Organizmy/Zwierze.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/Organizmy/Zwierze.cpp.s
 .PHONY : Organizmy/Zwierze.cpp.s
 
+Organizmy/Zwierzeta/Antylopa.obj: Organizmy/Zwierzeta/Antylopa.cpp.obj
+.PHONY : Organizmy/Zwierzeta/Antylopa.obj
+
+# target to build an object file
+Organizmy/Zwierzeta/Antylopa.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj
+.PHONY : Organizmy/Zwierzeta/Antylopa.cpp.obj
+
+Organizmy/Zwierzeta/Antylopa.i: Organizmy/Zwierzeta/Antylopa.cpp.i
+.PHONY : Organizmy/Zwierzeta/Antylopa.i
+
+# target to preprocess a source file
+Organizmy/Zwierzeta/Antylopa.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.i
+.PHONY : Organizmy/Zwierzeta/Antylopa.cpp.i
+
+Organizmy/Zwierzeta/Antylopa.s: Organizmy/Zwierzeta/Antylopa.cpp.s
+.PHONY : Organizmy/Zwierzeta/Antylopa.s
+
+# target to generate assembly for a file
+Organizmy/Zwierzeta/Antylopa.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.s
+.PHONY : Organizmy/Zwierzeta/Antylopa.cpp.s
+
+Organizmy/Zwierzeta/Czlowiek.obj: Organizmy/Zwierzeta/Czlowiek.cpp.obj
+.PHONY : Organizmy/Zwierzeta/Czlowiek.obj
+
+# target to build an object file
+Organizmy/Zwierzeta/Czlowiek.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj
+.PHONY : Organizmy/Zwierzeta/Czlowiek.cpp.obj
+
+Organizmy/Zwierzeta/Czlowiek.i: Organizmy/Zwierzeta/Czlowiek.cpp.i
+.PHONY : Organizmy/Zwierzeta/Czlowiek.i
+
+# target to preprocess a source file
+Organizmy/Zwierzeta/Czlowiek.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.i
+.PHONY : Organizmy/Zwierzeta/Czlowiek.cpp.i
+
+Organizmy/Zwierzeta/Czlowiek.s: Organizmy/Zwierzeta/Czlowiek.cpp.s
+.PHONY : Organizmy/Zwierzeta/Czlowiek.s
+
+# target to generate assembly for a file
+Organizmy/Zwierzeta/Czlowiek.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.s
+.PHONY : Organizmy/Zwierzeta/Czlowiek.cpp.s
+
 Organizmy/Zwierzeta/Lis.obj: Organizmy/Zwierzeta/Lis.cpp.obj
 .PHONY : Organizmy/Zwierzeta/Lis.obj
 
@@ -545,6 +593,12 @@ help:
 	@echo ... Organizmy/Zwierze.obj
 	@echo ... Organizmy/Zwierze.i
 	@echo ... Organizmy/Zwierze.s
+	@echo ... Organizmy/Zwierzeta/Antylopa.obj
+	@echo ... Organizmy/Zwierzeta/Antylopa.i
+	@echo ... Organizmy/Zwierzeta/Antylopa.s
+	@echo ... Organizmy/Zwierzeta/Czlowiek.obj
+	@echo ... Organizmy/Zwierzeta/Czlowiek.i
+	@echo ... Organizmy/Zwierzeta/Czlowiek.s
 	@echo ... Organizmy/Zwierzeta/Lis.obj
 	@echo ... Organizmy/Zwierzeta/Lis.i
 	@echo ... Organizmy/Zwierzeta/Lis.s

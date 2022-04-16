@@ -11,7 +11,7 @@ Zolw::Zolw() {
     this->swiat=swiat;
     this->inicjatywa=1;
     this->sila=2;
-    this->symbol='z';
+    this->symbol='Z';
     this->typ="Zolw";
 }
 
@@ -26,7 +26,7 @@ Zolw::Zolw(Swiat* swiat,int x, int y){
     this->swiat=swiat;
     this->inicjatywa=1;
     this->sila=2;
-    this->symbol='z';
+    this->symbol='Z';
     this->typ="Zolw";
 
 
@@ -41,5 +41,13 @@ void Zolw::akcja() {
     int s=rand() % 4;
     if(s==0) {
         Zwierze::akcja();
+    }
+}
+bool Zolw::CzyOdbilAtak(Organizm *napastnik) {
+    if (napastnik->getSila()>5){
+        return false;
+    }
+    else{
+        return true;
     }
 }

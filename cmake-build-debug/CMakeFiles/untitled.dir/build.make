@@ -292,6 +292,34 @@ CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Zolw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Zolw.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Wiktor\CLionProjects\PO_1\Organizmy\Zwierzeta\Zolw.cpp -o CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Zolw.cpp.s
 
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj: ../Organizmy/Zwierzeta/Antylopa.cpp
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Wiktor\CLionProjects\PO_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj -MF CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Antylopa.cpp.obj.d -o CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Antylopa.cpp.obj -c C:\Users\Wiktor\CLionProjects\PO_1\Organizmy\Zwierzeta\Antylopa.cpp
+
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Wiktor\CLionProjects\PO_1\Organizmy\Zwierzeta\Antylopa.cpp > CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Antylopa.cpp.i
+
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Wiktor\CLionProjects\PO_1\Organizmy\Zwierzeta\Antylopa.cpp -o CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Antylopa.cpp.s
+
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj: ../Organizmy/Zwierzeta/Czlowiek.cpp
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj: CMakeFiles/untitled.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Wiktor\CLionProjects\PO_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj -MF CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Czlowiek.cpp.obj.d -o CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Czlowiek.cpp.obj -c C:\Users\Wiktor\CLionProjects\PO_1\Organizmy\Zwierzeta\Czlowiek.cpp
+
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Wiktor\CLionProjects\PO_1\Organizmy\Zwierzeta\Czlowiek.cpp > CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Czlowiek.cpp.i
+
+CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Wiktor\CLionProjects\PO_1\Organizmy\Zwierzeta\Czlowiek.cpp -o CMakeFiles\untitled.dir\Organizmy\Zwierzeta\Czlowiek.cpp.s
+
 # Object files for target untitled
 untitled_OBJECTS = \
 "CMakeFiles/untitled.dir/main.cpp.obj" \
@@ -309,7 +337,9 @@ untitled_OBJECTS = \
 "CMakeFiles/untitled.dir/Organizmy/Rosliny/WilczeJagody.cpp.obj" \
 "CMakeFiles/untitled.dir/Organizmy/Rosliny/BarszczSosnowskiego.cpp.obj" \
 "CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Lis.cpp.obj" \
-"CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Zolw.cpp.obj"
+"CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Zolw.cpp.obj" \
+"CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj" \
+"CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
@@ -330,11 +360,13 @@ untitled.exe: CMakeFiles/untitled.dir/Organizmy/Rosliny/WilczeJagody.cpp.obj
 untitled.exe: CMakeFiles/untitled.dir/Organizmy/Rosliny/BarszczSosnowskiego.cpp.obj
 untitled.exe: CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Lis.cpp.obj
 untitled.exe: CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Zolw.cpp.obj
+untitled.exe: CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Antylopa.cpp.obj
+untitled.exe: CMakeFiles/untitled.dir/Organizmy/Zwierzeta/Czlowiek.cpp.obj
 untitled.exe: CMakeFiles/untitled.dir/build.make
 untitled.exe: CMakeFiles/untitled.dir/linklibs.rsp
 untitled.exe: CMakeFiles/untitled.dir/objects1.rsp
 untitled.exe: CMakeFiles/untitled.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Wiktor\CLionProjects\PO_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable untitled.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Wiktor\CLionProjects\PO_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable untitled.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\untitled.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -16,7 +16,7 @@ public:
     void akcja() override;
 
     void kolizja(Organizm *organizm) override;
-
+    bool CzyOdbilAtak(Organizm *napastnik) override;
 
 protected:
     void rozmnozSie();

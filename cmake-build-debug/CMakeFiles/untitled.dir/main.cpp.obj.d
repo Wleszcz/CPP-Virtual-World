@@ -158,6 +158,10 @@ CMakeFiles/untitled.dir/main.cpp.obj: \
  C:\Users\Wiktor\CLionProjects\PO_1\Organizmy/Rosliny/WilczeJagody.h \
  C:\Users\Wiktor\CLionProjects\PO_1\Organizmy/Rosliny/BarszczSosnowskiego.h \
  C:\Users\Wiktor\CLionProjects\PO_1\Organizmy/Zwierzeta/Lis.h \
+ C:\Users\Wiktor\CLionProjects\PO_1\Organizmy/Zwierzeta/Zolw.h \
+ C:\Users\Wiktor\CLionProjects\PO_1\Organizmy/Zwierzeta/Antylopa.h \
+ C:\Users\Wiktor\CLionProjects\PO_1\Organizmy/Zwierzeta/Czlowiek.h \
+ C:/Users/Wiktor/CLionProjects/PO_1/Swiat.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
