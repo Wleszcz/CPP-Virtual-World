@@ -12,8 +12,10 @@ class BarszczSosnowskiego:
         public Roslina
 {
 public:
-    BarszczSosnowskiego();
+    BarszczSosnowskiego(Swiat* swiat,int x,int y,int wiek,int sila);
     BarszczSosnowskiego(Swiat* swiat, int x, int y);
+    BarszczSosnowskiego();
+
 
     Organizm *Konstuktor(int x,int y) override;
 

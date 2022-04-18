@@ -19,15 +19,23 @@ void Zwierze::kolizja(Organizm *organizm) {
             }
         } else {
             if (getSila() > organizm->getSila()) {
+
+                if(swiat->Narrator) {
+                    std::cout << organizm->getY() << " zostal zjedzony przez " << typ << std::endl;
+                }
                 organizm->umrzyj();
-                std::cout << organizm->getY() << " zostal zjedzony przez " << typ << std::endl;
             } else if (getSila() < organizm->getSila()) {
+
+                if(swiat->Narrator) {
+                    std::cout << typ << " zostal zjedzony przez " << organizm->getTyp() << std::endl;
+                }
                 umrzyj();
-                std::cout << typ << " zostal zjedzony przez " << organizm->getTyp() << std::endl;
             } else {
+                if(swiat->Narrator) {
+                    std::cout << typ << " i " << organizm->getTyp() << " zjadly sie nawzajem" << std::endl;
+                }
                 umrzyj();
                 organizm->umrzyj();
-                std::cout << typ << " i " << organizm->getTyp() << " zjadly sie nawzajem" << std::endl;
             }
         }
     }

@@ -3,6 +3,15 @@
 //
 
 #include "Antylopa.h"
+Antylopa::Antylopa(Swiat *swiat, int x, int y,int wiek,int sila) {
+    this->swiat=swiat;
+    polozenie=new Punkt(x,y);
+    this->sila=sila;
+    this->wiek=wiek;
+    this->inicjatywa=4;
+    this->symbol='A';
+    this->typ="Antylopa";
+}
 
 Antylopa::Antylopa() {
     polozenie=new Punkt();
@@ -54,17 +63,23 @@ bool Antylopa::CzyOdbilAtak(Organizm *napastnik) {
     int x=rand() % 2;
     int b=polaObokZajete();
     if(x==0 || polaObokZajete()){
+
+        if(swiat->Narrator){
+            std::cout<<"Antylopie nie udalo sie uciec :( "<<std::endl;
+        }
         return false;
     }
     else{
         while(true) {
             Punkt *pole = losowePoleObok();
             if(!swiat->plansza->CzyMaZwierze(pole->getX(),pole->getY())){
+                if(swiat->Narrator){
+                    std::cout<<"Antylopie udalo sie uciec na "<<pole->getX()<<" "<<pole->getY()<<std::endl;
+                }
                 ruch(pole->getX(), pole->getY());
                 swiat->plansza->AktualizujPlansze(swiat->organizmy);
                 return true;
             }
         }
     }
-    return false;
 }

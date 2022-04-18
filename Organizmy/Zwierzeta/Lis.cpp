@@ -3,6 +3,15 @@
 //
 
 #include "Lis.h"
+Lis::Lis(Swiat* swiat,int x, int y,int wiek,int sila){
+    this->swiat=swiat;
+    polozenie=new Punkt(x,y);
+    this->sila=sila;
+    this->wiek=wiek;
+    this->inicjatywa=7;
+    this->symbol='L';
+    this->typ="Lis";
+}
 
 Lis::Lis() {
     polozenie=new Punkt();

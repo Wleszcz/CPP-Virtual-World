@@ -3,8 +3,24 @@
 //
 
 #include "Zolw.h"
+Zolw::Zolw(Swiat* swiat,int x, int y,int wiek,int sila){
+    polozenie=new Punkt(x,y);
+    this->swiat=swiat;
+    this->inicjatywa=1;
+    this->sila=sila;
+    this->wiek=wiek;
+    this->symbol='Z';
+    this->typ="Zolw";
+}
 
-
+Zolw::Zolw(Swiat* swiat,int x, int y){
+    polozenie=new Punkt(x,y);
+    this->swiat=swiat;
+    this->inicjatywa=1;
+    this->sila=2;
+    this->symbol='Z';
+    this->typ="Zolw";
+}
 
 Zolw::Zolw() {
     polozenie=new Punkt();
@@ -17,19 +33,6 @@ Zolw::Zolw() {
 
 void Zolw::kolizja(Organizm *organizm) {
     Zwierze::kolizja(organizm);
-}
-
-
-
-Zolw::Zolw(Swiat* swiat,int x, int y){
-    polozenie=new Punkt(x,y);
-    this->swiat=swiat;
-    this->inicjatywa=1;
-    this->sila=2;
-    this->symbol='Z';
-    this->typ="Zolw";
-
-
 }
 
 Organizm *Zolw::Konstuktor(int x,int y) {
@@ -45,9 +48,15 @@ void Zolw::akcja() {
 }
 bool Zolw::CzyOdbilAtak(Organizm *napastnik) {
     if (napastnik->getSila()>5){
+        if(swiat->Narrator){
+            std::cout<<"Zolw nie odbil ataku :("<<std::endl;
+        }
         return false;
     }
     else{
+        if(swiat->Narrator){
+            std::cout<<"Zolw odbil atak"<<std::endl;
+        }
         return true;
     }
 }

@@ -23,6 +23,9 @@ public:
     bool poprawnyRuch(int,int);
     bool CzyPusty(int x, int y);
 
+    int GetX();
+    int GetY();
+
 
 private:
     int x;

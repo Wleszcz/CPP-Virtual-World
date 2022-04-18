@@ -12,8 +12,10 @@ class Trawa:
         public Roslina
 {
 public:
-    Trawa();
+    Trawa(Swiat* swiat,int x,int y,int wiek,int sila);
     Trawa(Swiat* swiat,int x, int y);
+    Trawa();
+
     Organizm *Konstuktor(int x,int y) override;
 };
 

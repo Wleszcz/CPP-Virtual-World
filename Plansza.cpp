@@ -99,3 +99,10 @@ Organizm *Plansza::getOrganizm(int x, int y) {
     return pola[x][y];
 }
 
+int Plansza::GetX() {
+    return x;
+}
+int Plansza::GetY() {
+    return y;
+}
+

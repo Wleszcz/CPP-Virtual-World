@@ -13,8 +13,10 @@ class Mlecz:
         public Roslina
 {
 public:
-    Mlecz();
+    Mlecz(Swiat* swiat,int x,int y,int wiek,int sila);
     Mlecz(Swiat* swiat,int x, int y);
+    Mlecz();
+
 
     Organizm *Konstuktor(int x,int y) override;
 

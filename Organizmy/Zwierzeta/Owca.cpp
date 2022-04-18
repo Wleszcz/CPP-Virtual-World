@@ -3,6 +3,15 @@
 //
 
 #include "Owca.h"
+Owca::Owca(Swiat* swiat,int x, int y,int wiek,int sila){
+    this->swiat=swiat;
+    polozenie=new Punkt(x,y);
+    this->sila=sila;
+    this->wiek=wiek;
+    this->inicjatywa=4;
+    this->symbol='o';
+    this->typ="Owca";
+}
 
 Owca::Owca() {
     polozenie=new Punkt();

@@ -14,8 +14,10 @@ class Guarana:
         public Roslina
 {
 public:
-    Guarana();
+    Guarana(Swiat* swiat,int x,int y,int wiek,int sila);
     Guarana(Swiat* swiat,int x, int y);
+    Guarana();
+
 
     Organizm *Konstuktor(int x,int y) override;
 

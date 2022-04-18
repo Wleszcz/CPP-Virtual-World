@@ -15,6 +15,7 @@ class Plansza;
 class Swiat{
 protected:
     int tura=0;
+    int iloscTur=10;
 
 
 public:
@@ -22,15 +23,24 @@ public:
 
 
     Swiat(int x, int y);
+    Swiat(int x, int y,int tura,int iloscTur);
     Plansza* plansza;
-
+    bool Koniec;
+    bool Narrator;
     void rysujSwiat();
-    void listaOrganizmow();
-    void listaZwierzat();
-    void wykonajTure();
+    void listaOrganizmow() const;
+    void listaZwierzat() const;
+    void zmienIloscTur();
+    int wykonajTure();
+    int GetIloscTur() const;
+
     void dodajOrganizm(Organizm* organizm);
     void sortujOrganizmy();
     void usunMartwe();
+
+    bool zapiszSwiat();
+
+    void statystyki();
 
 };
 

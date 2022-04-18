@@ -28,8 +28,8 @@ public:
 
 
     void ruch(int x,int y);
-    void umrzyj();
-    void starzejSie();
+    virtual void umrzyj();
+    virtual void starzejSie();
     void BonusSila();
 
 

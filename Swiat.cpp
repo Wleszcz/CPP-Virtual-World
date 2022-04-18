@@ -1,73 +1,108 @@
-//
-// Created by wikto on 12.04.2022.
-//
-
 #include "Swiat.h"
 #include "Organizmy/Zwierze.h"
+#include "Organizmy/Zwierzeta/Czlowiek.h"
+#include <fstream>
+#include <iostream>
+
+
+#define LISTA_ORGANIZMOW false
+#define LISTA_ZWIERZAT false
+#define STATYSTYKI true
+#define NARRATOR true
+
+using namespace std;
 
 
 Swiat::Swiat(int x, int y) {
     plansza = new Plansza(x,y);
+    Narrator=NARRATOR;
+}
+Swiat::Swiat(int x, int y,int tura,int iloscTur) {
+    plansza = new Plansza(x,y);
+    this->tura=tura;
+    this->iloscTur=iloscTur;
+    Narrator=NARRATOR;
 }
 
 void Swiat::rysujSwiat() {
+    if(LISTA_ORGANIZMOW){listaOrganizmow();}
+    if(LISTA_ZWIERZAT){listaZwierzat();}
+    if (STATYSTYKI){statystyki();}
+
+    std::cout<<"Tura: "<<tura<<" / "<<iloscTur<<std::endl;
     plansza->RysujPlansze();
 }
 
-void Swiat::wykonajTure() {
-    std::cout<<tura<<std::endl;
+int Swiat::wykonajTure() {                              //Glowny mechanizm rozgrywania tur oraz prezentowania planszy na ekranie
     plansza->AktualizujPlansze(organizmy);
 
     for (int i = 0; i < organizmy.size(); ++i) {
-        if (organizmy[i]->CzyZyje() && organizmy[i]->getWiek()!=0) {
-            organizmy[i]->akcja();
+        if (organizmy[i]->CzyZyje()) {
 
+            if(organizmy[i]->getWiek()!=0) {
+                organizmy[i]->akcja();
+            }
+            organizmy[i]->starzejSie();
+            organizmy[i]->gotowy = true;
+
+            if(Koniec==true){
+                return 1;
+            }
         }
-        organizmy[i]->starzejSie();
-        organizmy[i]->gotowy= true;
     }
-
-    //listaOrganizmow();
-    listaZwierzat();
+    tura++;
     rysujSwiat();
 
-    tura++;
+    return 0;
 }
 
-void Swiat::dodajOrganizm(Organizm *organizm) {
-    organizmy.push_back(organizm);
-    sortujOrganizmy();
-    plansza->AktualizujPlansze(organizmy);
+void Swiat::dodajOrganizm(Organizm *organizm) {                     //Glowna funkcja dodajaca organizmy na liste, oraz plansze
+    int x=organizm->getX();
+    int y=organizm->getY();
+    if(plansza->CzyPusty(x,y) && plansza->poprawnyRuch(x,y)){
+        organizmy.push_back(organizm);
+        sortujOrganizmy();
+        plansza->AktualizujPlansze(organizmy);
+    }
 }
 
-void Swiat::listaOrganizmow() {
+void Swiat::listaOrganizmow() const {                                          //Nastepne 3 funkcje ulatwiaja debugowanie, wypisuja zyjace zwierzeta
     for (int i = 0; i < organizmy.size(); ++i) {
         std::cout<<"_____"<<i<<"_____"<<std::endl;
         std::cout<<"Typ:         "<<organizmy[i]->getTyp()<<std::endl;
         std::cout<<"Incicjatywa: "<<organizmy[i]->getInicjatywa()<<std::endl;
         std::cout<<"Sila:        "<<organizmy[i]->getSila()<<std::endl;
-        std::cout<<"Zyje:        ";
-        if(organizmy[i]->CzyZyje()==1){std::cout<<"tak"<<std::endl;}else{std::cout<<"nie"<<std::endl;}
         std::cout<<"Wiek:        "<<organizmy[i]->getWiek()<<std::endl;
         std::cout<<"Polozenie:   "<<organizmy[i]->getX()<<"  "<<organizmy[i]->getY()<<std::endl;
         std::cout<<std::endl<<std::endl;
     }
 }
-void Swiat::listaZwierzat() {
+void Swiat::listaZwierzat() const {
     for (int i = 0; i < organizmy.size(); ++i) {
         if(Zwierze* t = dynamic_cast<Zwierze*>(organizmy[i])){
         std::cout<<"_____"<<i<<"_____"<<std::endl;
         std::cout<<"Typ:         "<<organizmy[i]->getTyp()<<std::endl;
         std::cout<<"Incicjatywa: "<<organizmy[i]->getInicjatywa()<<std::endl;
         std::cout<<"Sila:        "<<organizmy[i]->getSila()<<std::endl;
-        std::cout<<"Zyje:        ";
-        if(organizmy[i]->CzyZyje()==1){std::cout<<"tak"<<std::endl;}else{std::cout<<"nie"<<std::endl;}
         std::cout<<"Wiek:        "<<organizmy[i]->getWiek()<<std::endl;
         std::cout<<"Polozenie:   "<<organizmy[i]->getX()<<"  "<<organizmy[i]->getY()<<std::endl;
         std::cout<<std::endl<<std::endl;
             }
         }
     }
+
+void Swiat::statystyki() {
+    for (int i = 0; i < organizmy.size(); ++i) {
+        if(Czlowiek* t = dynamic_cast<Czlowiek*>(organizmy[i])){
+            std::cout<<"___________"<<std::endl;
+            std::cout<<"Typ:         "<<organizmy[i]->getTyp()<<std::endl;
+            std::cout<<"Incicjatywa: "<<organizmy[i]->getInicjatywa()<<std::endl;
+            std::cout<<"Sila:        "<<organizmy[i]->getSila()<<std::endl;
+            std::cout<<"Wiek:        "<<organizmy[i]->getWiek()<<std::endl;
+            std::cout<<"Polozenie:   "<<organizmy[i]->getX()<<"  "<<organizmy[i]->getY()<<std::endl;
+        }
+    }
+}
 
 
 
@@ -94,7 +129,7 @@ void Swiat::usunMartwe() {
     int size = organizmy.size(),dead=0;
     for (size_t i = 0; i < size; i++)
     {
-        if (organizmy[i]->CzyZyje() == false) {
+        if (!organizmy[i]->CzyZyje()) {
             dead++;
         }
         else
@@ -104,6 +139,44 @@ void Swiat::usunMartwe() {
     {
         organizmy.pop_back();
     }
+}
+
+bool Swiat::zapiszSwiat() {
+    std::ofstream ZAPIS;
+
+    std::string AA="TEST ZAPISU";
+    char b='b';
+
+    ZAPIS.open( "save.txt", std::ios::out | std::ios::trunc );
+    if(ZAPIS.is_open()) {
+        ZAPIS << this->plansza->GetX()<<endl;
+        ZAPIS << this->plansza->GetY()<<endl;
+        ZAPIS << this->tura<<endl;
+        ZAPIS << this->iloscTur<<endl;
+        ZAPIS << organizmy.size()<<endl;
+        for (int i = 0; i < organizmy.size(); ++i) {
+            ZAPIS<<organizmy[i]->getTyp()<<endl;
+            ZAPIS<<organizmy[i]->getWiek()<<endl;
+            ZAPIS<<organizmy[i]->getSila()<<endl;
+            ZAPIS<<organizmy[i]->getX()<<endl;
+            ZAPIS<<organizmy[i]->getY()<<endl;
+        }
+        ZAPIS.close();
+    }
+    else{
+        std::cout<<"Blad Zapisu!"<<std::endl;
+    }
+}
+
+void Swiat::zmienIloscTur() {
+    cout<<"Wpisz Ilosc tur do rozegrania: "<<endl;
+    int ilosc;
+    cin>>ilosc;
+    this->iloscTur=ilosc;
+}
+
+int Swiat::GetIloscTur() const {
+    return iloscTur;
 }
 
 

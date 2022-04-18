@@ -11,6 +11,7 @@ class Owca :
 
 {
 public:
+    Owca(Swiat* swiat,int x,int y,int wiek,int sila);
     Owca(Swiat* swiat,int x,int y);
     Owca();
 

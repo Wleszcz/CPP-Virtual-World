@@ -9,6 +9,15 @@ void BarszczSosnowskiego::kolizja(Organizm *organizm) {
     organizm->umrzyj();
 }
 
+BarszczSosnowskiego::BarszczSosnowskiego(Swiat *swiat, int x, int y,int wiek,int sila) {
+    polozenie=new Punkt(x,y);
+    this->swiat=swiat;
+    this->sila=sila;
+    this->wiek=wiek;
+    this->symbol='X';
+    this->typ="Barszcz Sosnowskiego";
+}
+
 BarszczSosnowskiego::BarszczSosnowskiego(Swiat *swiat, int x, int y) {
     polozenie=new Punkt(x,y);
     this->swiat=swiat;
@@ -37,6 +46,10 @@ void BarszczSosnowskiego::akcja() {
 
                 if(!swiat->plansza->CzyPusty(x+i,y+j)){
                     if(Zwierze* t = dynamic_cast<Zwierze*>(swiat->plansza->getOrganizm(x+i,y+j))){
+
+                    if(swiat->Narrator){
+                        std::cout<<swiat->plansza->getOrganizm(x+i,y+j)->getTyp()<<" zostal zabity przez Barszcz Sosnowskiego"<<std::endl;
+                    }
                     swiat->plansza->getOrganizm(x+i,y+j)->umrzyj();
                 }
                 }

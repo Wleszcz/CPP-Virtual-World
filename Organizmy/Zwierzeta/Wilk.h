@@ -12,6 +12,7 @@ class Wilk:
         public Zwierze
 {
 public:
+    Wilk(Swiat* swiat,int x,int y,int wiek,int sila);
     Wilk(Swiat* swiat,int x, int y);
     Wilk();
 

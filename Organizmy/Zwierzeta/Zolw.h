@@ -10,6 +10,7 @@ class Zolw :
         public Zwierze
 {
 public:
+    Zolw(Swiat* swiat,int x,int y,int wiek,int sila);
     Zolw(Swiat* swiat,int x,int y);
     Zolw();
 
