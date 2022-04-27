@@ -86,6 +86,19 @@ Punkt* Organizm::losowePoleObok() {
     return new Punkt(xK,yK);
 }
 
+bool Organizm::CzyGotowy() const {
+    if(this->gotowy==true){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+void Organizm::Gotowy(bool zmienna) {
+    this->gotowy=zmienna;
+}
+
 
 
 

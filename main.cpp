@@ -153,17 +153,19 @@ bool wczytanieZapisu() {
         ZAPIS.open("save.txt", std::ios::in);
         if (ZAPIS.is_open()) {
 
-            string x_s,y_s,tura_s,iloscTur_s,organizmy_s;
-            int x,y,tura,iloscTur,organizmy;
+            string x_s,y_s,tura_s,iloscTur_s,organizmy_s,umiejetnosc_s;
+            int x,y,tura,iloscTur,organizmy,umiejetnosc;
             getline(ZAPIS ,x_s);
             getline(ZAPIS ,y_s);
             getline(ZAPIS ,tura_s);
             getline(ZAPIS ,iloscTur_s);
+            getline(ZAPIS,umiejetnosc_s);
             getline(ZAPIS ,organizmy_s);
             x=stoi(x_s);
             y=stoi(y_s);
             tura=stoi(tura_s);
             iloscTur=stoi(iloscTur_s);
+            umiejetnosc= stoi(umiejetnosc_s);
             organizmy=stoi(organizmy_s);
 
             Swiat swiat(x, y,tura,iloscTur);
@@ -178,6 +180,7 @@ bool wczytanieZapisu() {
                 getline(ZAPIS ,sila_s);
                 getline(ZAPIS ,x_s2);
                 getline(ZAPIS ,y_s2);
+
 
                 wiek=stoi(wiek_s);
                 sila= stoi(sila_s);
@@ -195,8 +198,7 @@ bool wczytanieZapisu() {
                 else if(typ=="Antylopa"){
                     swiat.dodajOrganizm(new Antylopa(&swiat,x,y,wiek,sila));}
                 else if(typ=="Czlowiek"){
-                    swiat.dodajOrganizm(new Czlowiek(&swiat,x,y,wiek,sila));}
-
+                    swiat.dodajOrganizm(new Czlowiek(&swiat,x,y,wiek,sila,umiejetnosc));}
                 else if(typ=="Barszcz Sosnowskiego"){
                     swiat.dodajOrganizm(new BarszczSosnowskiego(&swiat,x,y,wiek,sila));}
                 else if(typ=="Guarana"){

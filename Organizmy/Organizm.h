@@ -19,18 +19,20 @@ protected:
     std::string typ;
     Punkt* polozenie;
 
+    bool gotowy=true;
 public:
     Swiat* swiat;
     virtual void akcja()=0;
     virtual void kolizja(Organizm*)=0;
     virtual Organizm* Konstuktor(int x,int y)=0;
     virtual bool CzyOdbilAtak(Organizm* napastnik)=0;
-
-
-    void ruch(int x,int y);
     virtual void umrzyj();
     virtual void starzejSie();
+    virtual void Gotowy(bool);
+
+    void ruch(int x,int y);
     void BonusSila();
+
 
 
     char getSymbol() const;
@@ -39,12 +41,13 @@ public:
     int getWiek() const;
     int getSila() const;
     bool CzyZyje() const;
+    bool CzyGotowy() const;
     int getInicjatywa() const;
     std::string getTyp();
 
     Punkt* losowePoleObok();
 
-    bool gotowy=true;
+
 
 };
 

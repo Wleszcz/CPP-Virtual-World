@@ -8,7 +8,7 @@
 #define SILA 5
 
 using namespace std;
-Czlowiek::Czlowiek(Swiat *swiat, int x, int y,int wiek,int sila) {
+Czlowiek::Czlowiek(Swiat *swiat, int x, int y, int wiek, int sila, int umiejstnosc) {
     this->swiat=swiat;
     polozenie=new Punkt(x,y);
     this->sila=sila;
@@ -16,6 +16,18 @@ Czlowiek::Czlowiek(Swiat *swiat, int x, int y,int wiek,int sila) {
     this->inicjatywa=4;
     this->symbol='Y';
     this->typ="Czlowiek";
+    if(umiejstnosc==11){
+        umiejetnoscTrwa= true;
+        uzytoUmiejstnosc= true;
+    }
+    else if(umiejstnosc==0){
+        uzytoUmiejstnosc= true;
+        umiejetnoscTrwa= false;
+    }
+    else {
+        umiejetnoscTrwa= false;
+        uzytoUmiejstnosc= false;
+    }
 }
 
 Czlowiek::Czlowiek() {
@@ -25,6 +37,8 @@ Czlowiek::Czlowiek() {
     this->inicjatywa=4;
     this->symbol='Y';
     this->typ="Czlowiek";
+    umiejetnoscTrwa= false;
+    uzytoUmiejstnosc= false;
 }
 
 Czlowiek::Czlowiek(Swiat *swiat, int x, int y) {
@@ -34,6 +48,8 @@ Czlowiek::Czlowiek(Swiat *swiat, int x, int y) {
     this->inicjatywa=4;
     this->symbol='Y';
     this->typ="Czlowiek";
+    umiejetnoscTrwa= false;
+    uzytoUmiejstnosc= false;
 }
 
 Organizm *Czlowiek::Konstuktor(int x, int y) {
@@ -41,8 +57,10 @@ Organizm *Czlowiek::Konstuktor(int x, int y) {
 }
 
 void Czlowiek::akcja() {
+    this->swiat->InformacjeOUmiejetnosc=UmiejetnoscInfo();
     char c;
-    cin>>c;
+    c=getchar();
+    getchar();
     int x=getX();
     int y=getY();
     if(c=='w'){
@@ -62,7 +80,9 @@ void Czlowiek::akcja() {
     }
     else if (c=='z'){
         swiat->zapiszSwiat();
+        cout<<"Zapisano Swiat"<<endl;
         this->akcja();
+        this->swiat->plansza->AktualizujPlansze(this->swiat->organizmy);
     }
     if(swiat->plansza->poprawnyRuch(x,y)){
         ruch(x,y);
@@ -81,27 +101,44 @@ void Czlowiek::umrzyj() {
     }
 }
 
-bool Czlowiek::Umiejetnosc() {
+void Czlowiek::Umiejetnosc() {
     if(!uzytoUmiejstnosc && sila <= 10){
-    umiejetnoscAktywna=true;
+    umiejetnoscTrwa= true;
     uzytoUmiejstnosc=true;
     cout<<"UZYTO UMIEJETNOSCI"<<endl;
         sila = 10;
-}
-
+    }
 }
 
 void Czlowiek::starzejSie() {
 
-    if(umiejetnoscAktywna){
+    if(umiejetnoscTrwa){
         if(sila==SILA+1){
-            umiejetnoscAktywna=false;
+            umiejetnoscTrwa=false;
             cout<<"KONIEC DZIALANIA UMIEJETNOSCI"<<endl;
         }
         sila--;
     }
     Organizm::starzejSie();
 }
+
+
+bool Czlowiek::CzyUmTrwa() {
+    return umiejetnoscTrwa;
+}
+
+bool Czlowiek::CzyUmWykorzystana() {
+    return uzytoUmiejstnosc;
+}
+
+int Czlowiek::UmiejetnoscInfo() const {
+    if(umiejetnoscTrwa && uzytoUmiejstnosc){return 11;}
+    else if(!umiejetnoscTrwa && uzytoUmiejstnosc){return 0;}
+    else if(!umiejetnoscTrwa && !uzytoUmiejstnosc){return 1;}
+
+}
+
+
 
 
 

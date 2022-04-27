@@ -12,10 +12,10 @@ void Zwierze::akcja() {
 
 void Zwierze::kolizja(Organizm *organizm) {
         if ((typ == organizm->getTyp())) {
-            if (organizm->getWiek() != 0 && this->gotowy && organizm->gotowy && !(this->polaObokZajete())) {
+            if (organizm->getWiek() != 0 && this->gotowy && organizm->CzyGotowy() && !(this->polaObokZajete())) {
                 rozmnozSie();
                 gotowy = false;
-                organizm->gotowy = false;
+                organizm->Gotowy(false);
             }
         } else {
             if (getSila() > organizm->getSila()) {

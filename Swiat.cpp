@@ -43,9 +43,9 @@ int Swiat::wykonajTure() {                              //Glowny mechanizm rozgr
                 organizmy[i]->akcja();
             }
             organizmy[i]->starzejSie();
-            organizmy[i]->gotowy = true;
+            organizmy[i]->Gotowy(true);
 
-            if(Koniec==true){
+            if(Koniec){
                 return 1;
             }
         }
@@ -144,15 +144,15 @@ void Swiat::usunMartwe() {
 bool Swiat::zapiszSwiat() {
     std::ofstream ZAPIS;
 
-    std::string AA="TEST ZAPISU";
-    char b='b';
 
     ZAPIS.open( "save.txt", std::ios::out | std::ios::trunc );
     if(ZAPIS.is_open()) {
+        Czlowiek* czlowiek;
         ZAPIS << this->plansza->GetX()<<endl;
         ZAPIS << this->plansza->GetY()<<endl;
         ZAPIS << this->tura<<endl;
         ZAPIS << this->iloscTur<<endl;
+        ZAPIS << this->InformacjeOUmiejetnosc<<endl;
         ZAPIS << organizmy.size()<<endl;
         for (int i = 0; i < organizmy.size(); ++i) {
             ZAPIS<<organizmy[i]->getTyp()<<endl;
@@ -160,6 +160,7 @@ bool Swiat::zapiszSwiat() {
             ZAPIS<<organizmy[i]->getSila()<<endl;
             ZAPIS<<organizmy[i]->getX()<<endl;
             ZAPIS<<organizmy[i]->getY()<<endl;
+
         }
         ZAPIS.close();
     }

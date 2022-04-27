@@ -33,6 +33,7 @@ public:
     void zmienIloscTur();
     int wykonajTure();
     int GetIloscTur() const;
+    int InformacjeOUmiejetnosc;
 
     void dodajOrganizm(Organizm* organizm);
     void sortujOrganizmy();
