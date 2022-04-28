@@ -14,7 +14,7 @@ public Zwierze
         public:
         Antylopa(Swiat* swiat,int x,int y,int wiek,int sila);
         Antylopa(Swiat* swiat,int x,int y);
-        Antylopa();
+        Antylopa(Swiat* swiat);
 
     bool CzyOdbilAtak(Organizm *napastnik) override;
 

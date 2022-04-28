@@ -22,7 +22,7 @@ Zolw::Zolw(Swiat* swiat,int x, int y){
     this->typ="Zolw";
 }
 
-Zolw::Zolw() {
+Zolw::Zolw(Swiat* swiat) {
     polozenie=new Punkt();
     this->swiat=swiat;
     this->inicjatywa=1;

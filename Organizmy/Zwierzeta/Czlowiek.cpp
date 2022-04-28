@@ -30,7 +30,7 @@ Czlowiek::Czlowiek(Swiat *swiat, int x, int y, int wiek, int sila, int umiejstno
     }
 }
 
-Czlowiek::Czlowiek() {
+Czlowiek::Czlowiek(Swiat* swiat) {
     polozenie=new Punkt();
     this->swiat=swiat;
     this->sila=SILA;
@@ -53,14 +53,13 @@ Czlowiek::Czlowiek(Swiat *swiat, int x, int y) {
 }
 
 Organizm *Czlowiek::Konstuktor(int x, int y) {
-    return nullptr;
+    return new Czlowiek(swiat,x,y);
 }
 
 void Czlowiek::akcja() {
     this->swiat->InformacjeOUmiejetnosc=UmiejetnoscInfo();
     char c;
-    c=getchar();
-    getchar();
+    cin>>c;
     int x=getX();
     int y=getY();
     if(c=='w'){

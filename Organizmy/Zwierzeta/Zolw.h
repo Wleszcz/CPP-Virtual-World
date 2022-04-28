@@ -12,7 +12,7 @@ class Zolw :
 public:
     Zolw(Swiat* swiat,int x,int y,int wiek,int sila);
     Zolw(Swiat* swiat,int x,int y);
-    Zolw();
+    Zolw(Swiat* swiat);
 
     Organizm *Konstuktor(int x,int y) override;
 

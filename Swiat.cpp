@@ -148,14 +148,20 @@ bool Swiat::zapiszSwiat() {
     ZAPIS.open( "save.txt", std::ios::out | std::ios::trunc );
     if(ZAPIS.is_open()) {
         Czlowiek* czlowiek;
+        ZAPIS << "Wielkosc planszy:"<<endl;
         ZAPIS << this->plansza->GetX()<<endl;
         ZAPIS << this->plansza->GetY()<<endl;
+        ZAPIS << "Tury rozegrane/wszystkie:"<<endl;
         ZAPIS << this->tura<<endl;
         ZAPIS << this->iloscTur<<endl;
+        ZAPIS << "Inforamcje o umiejetnosci(11-aktywna,1-wykorzystana,0-do uzycia):"<<endl;
         ZAPIS << this->InformacjeOUmiejetnosc<<endl;
+        ZAPIS << "Ilosc Organizmow:"<<endl;
         ZAPIS << organizmy.size()<<endl;
         for (int i = 0; i < organizmy.size(); ++i) {
+            ZAPIS<<endl;
             ZAPIS<<organizmy[i]->getTyp()<<endl;
+            ZAPIS<<"Wiek / Sila / Pozycja :"<<endl;
             ZAPIS<<organizmy[i]->getWiek()<<endl;
             ZAPIS<<organizmy[i]->getSila()<<endl;
             ZAPIS<<organizmy[i]->getX()<<endl;

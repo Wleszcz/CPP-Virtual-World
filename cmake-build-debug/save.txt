@@ -1,501 +1,1410 @@
+Wielkosc planszy:
 60
 20
-32
+Tury rozegrane/wszystkie:
+11
 100
-0
-99
-Lis
-34
-3
-11
-17
-Lis
-34
-3
-19
-18
-Lis
-33
-3
+Inforamcje o umiejetnosci(11-aktywna,1-wykorzystana,0-do uzycia):
+1
+Ilosc Organizmow:
+200
+
+Wilk
+Wiek / Sila / Pozycja :
 12
-14
-Lis
-32
-3
-8
 9
-Lis
+50
 10
-3
-8
-16
+
 Wilk
-34
+Wiek / Sila / Pozycja :
+12
 9
-21
-16
-Wilk
-34
-9
-20
-16
-Czlowiek
-32
 5
-31
-1
-Owca
-32
-4
+12
+
+Wilk
+Wiek / Sila / Pozycja :
+12
+9
+24
+12
+
+Wilk
+Wiek / Sila / Pozycja :
+12
+9
+17
+17
+
+Wilk
+Wiek / Sila / Pozycja :
+12
+9
 21
-3
-Owca
-32
-4
-19
 2
-Antylopa
-32
-4
-54
-1
-Antylopa
-32
-4
-31
-8
+
 Owca
-13
-4
+Wiek / Sila / Pozycja :
 12
 4
-Zolw
-32
+52
+0
+
+Owca
+Wiek / Sila / Pozycja :
+12
+12
+17
+11
+
+Owca
+Wiek / Sila / Pozycja :
+12
+4
+30
 2
-27
+
+Owca
+Wiek / Sila / Pozycja :
+12
+4
+15
+15
+
+Owca
+Wiek / Sila / Pozycja :
+12
+12
+1
+15
+
+Owca
+Wiek / Sila / Pozycja :
+12
+4
+17
 13
-Zolw
-32
-2
-32
-16
-Trawa
-32
-0
-9
-9
-Guarana
-32
-0
+
+Owca
+Wiek / Sila / Pozycja :
+12
+4
+14
+15
+
+Owca
+Wiek / Sila / Pozycja :
+12
+4
 7
+12
+
+Owca
+Wiek / Sila / Pozycja :
+12
 4
-Wilcze Jagody
-32
-99
+35
 10
+
+Owca
+Wiek / Sila / Pozycja :
+12
 4
-Guarana
-30
-0
-6
-3
-Wilcze Jagody
-30
-99
-9
-3
-Wilcze Jagody
 26
-99
 10
+
+Czlowiek
+Wiek / Sila / Pozycja :
+11
 5
+22
+1
+
+Owca
+Wiek / Sila / Pozycja :
+2
+4
+20
+10
+
+Zolw
+Wiek / Sila / Pozycja :
+11
+2
+36
+7
+
+Zolw
+Wiek / Sila / Pozycja :
+11
+6
+3
+6
+
+Zolw
+Wiek / Sila / Pozycja :
+11
+2
+30
+7
+
+Zolw
+Wiek / Sila / Pozycja :
+11
+2
+36
+18
+
+Barszcz Sosnowskiego
+Wiek / Sila / Pozycja :
+11
+0
+12
+9
+
+Barszcz Sosnowskiego
+Wiek / Sila / Pozycja :
+11
+0
+51
+6
+
+Barszcz Sosnowskiego
+Wiek / Sila / Pozycja :
+11
+0
+51
+12
+
+Guarana
+Wiek / Sila / Pozycja :
+11
+0
+50
+2
+
+Guarana
+Wiek / Sila / Pozycja :
+11
+0
+43
+19
+
+Guarana
+Wiek / Sila / Pozycja :
+11
+0
+14
+6
+
+Guarana
+Wiek / Sila / Pozycja :
+10
+0
+2
+7
+
+Mlecz
+Wiek / Sila / Pozycja :
+11
+0
+1
+4
+
+Mlecz
+Wiek / Sila / Pozycja :
+11
+0
+2
+16
+
+Mlecz
+Wiek / Sila / Pozycja :
+11
+0
+14
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+11
+0
+44
+18
+
+Mlecz
+Wiek / Sila / Pozycja :
+11
+0
+32
+7
+
 Trawa
+Wiek / Sila / Pozycja :
+11
+0
+1
+0
+
+Trawa
+Wiek / Sila / Pozycja :
+11
+0
+58
+8
+
+Trawa
+Wiek / Sila / Pozycja :
+11
+0
+22
+5
+
+Trawa
+Wiek / Sila / Pozycja :
+11
+0
+34
+18
+
+Trawa
+Wiek / Sila / Pozycja :
+11
+0
+37
+2
+
+Trawa
+Wiek / Sila / Pozycja :
+11
+0
+36
+16
+
+Trawa
+Wiek / Sila / Pozycja :
+11
+0
+23
+7
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+11
+99
+41
+1
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+11
+99
+9
+14
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+11
+99
+40
+1
+
+Guarana
+Wiek / Sila / Pozycja :
+10
+0
+2
+6
+
+Mlecz
+Wiek / Sila / Pozycja :
+10
+0
+2
+17
+
+Mlecz
+Wiek / Sila / Pozycja :
+10
+0
+14
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+10
+0
+44
+19
+
+Trawa
+Wiek / Sila / Pozycja :
+10
+0
+36
+1
+
+Trawa
+Wiek / Sila / Pozycja :
+10
+0
+30
+3
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+10
+99
+8
+14
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+10
+99
+39
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+9
+0
+1
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+9
+0
+1
+16
+
+Mlecz
+Wiek / Sila / Pozycja :
+9
+0
+43
+18
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+9
+99
+42
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+9
+0
+3
+16
+
+Mlecz
+Wiek / Sila / Pozycja :
+9
+0
+3
+17
+
+Mlecz
+Wiek / Sila / Pozycja :
+9
+0
+14
+2
+
+Mlecz
+Wiek / Sila / Pozycja :
+9
+0
+45
+18
+
+Guarana
+Wiek / Sila / Pozycja :
+8
+0
+51
+3
+
+Mlecz
+Wiek / Sila / Pozycja :
+8
+0
+15
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+8
+0
+32
+6
+
+Trawa
+Wiek / Sila / Pozycja :
+8
+0
+22
+4
+
+Trawa
+Wiek / Sila / Pozycja :
+8
+0
+37
+3
+
+Trawa
+Wiek / Sila / Pozycja :
+8
+0
+26
+9
+
+Mlecz
+Wiek / Sila / Pozycja :
+8
+0
+2
+4
+
+Mlecz
+Wiek / Sila / Pozycja :
+8
+0
+3
+18
+
+Mlecz
+Wiek / Sila / Pozycja :
+8
+0
+4
+17
+
+Guarana
+Wiek / Sila / Pozycja :
+7
+0
+49
+2
+
+Guarana
+Wiek / Sila / Pozycja :
+7
+0
+15
+6
+
+Guarana
+Wiek / Sila / Pozycja :
+7
+0
+3
+7
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+1
+17
+
+Trawa
+Wiek / Sila / Pozycja :
+7
+0
+57
+9
+
+Trawa
+Wiek / Sila / Pozycja :
+7
+0
+21
+6
+
+Trawa
+Wiek / Sila / Pozycja :
+7
+0
+36
+17
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+1
+18
+
+Trawa
+Wiek / Sila / Pozycja :
+7
+0
+35
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+43
+17
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+7
+99
+43
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+4
+18
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+14
+3
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+16
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+16
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+31
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+7
+0
+31
+6
+
+Mlecz
+Wiek / Sila / Pozycja :
+6
+0
+0
+4
+
+Mlecz
+Wiek / Sila / Pozycja :
+6
+0
+2
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+6
+0
+0
+15
+
+Mlecz
+Wiek / Sila / Pozycja :
+6
+0
+46
+17
+
+Mlecz
+Wiek / Sila / Pozycja :
+6
+0
+15
+1
+
+Trawa
+Wiek / Sila / Pozycja :
+6
+0
+36
+3
+
+Trawa
+Wiek / Sila / Pozycja :
+6
+0
+34
+2
+
+Mlecz
+Wiek / Sila / Pozycja :
+6
+0
+44
+17
+
+Mlecz
+Wiek / Sila / Pozycja :
+6
+0
+13
+4
+
+Guarana
+Wiek / Sila / Pozycja :
+5
+0
+13
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+2
+15
+
+Trawa
+Wiek / Sila / Pozycja :
+5
+0
+37
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+13
+2
+
+Trawa
+Wiek / Sila / Pozycja :
+5
+0
+30
+2
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+5
+99
+38
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+15
+2
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+46
+18
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+3
+5
+
+Guarana
+Wiek / Sila / Pozycja :
+5
+0
+48
+3
+
+Trawa
+Wiek / Sila / Pozycja :
+5
+0
+21
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+2
+18
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+2
+19
+
+Trawa
+Wiek / Sila / Pozycja :
+5
+0
+34
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+4
+19
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+32
+4
+
+Mlecz
+Wiek / Sila / Pozycja :
+5
+0
+30
+6
+
+Trawa
+Wiek / Sila / Pozycja :
+5
+0
+33
+2
+
+Guarana
+Wiek / Sila / Pozycja :
+4
+0
+13
+6
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+32
+8
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+4
+99
+42
+1
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+4
+99
+39
+2
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+45
+19
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+42
+19
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+4
+16
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+33
+6
+
+Trawa
+Wiek / Sila / Pozycja :
+4
+0
+37
+4
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+3
+4
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+5
+18
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+4
+99
+44
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+30
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+0
+3
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+0
+16
+
+Mlecz
+Wiek / Sila / Pozycja :
+4
+0
+31
+7
+
+Trawa
+Wiek / Sila / Pozycja :
+4
+0
+33
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+33
+8
+
+Trawa
+Wiek / Sila / Pozycja :
+3
+0
+0
+1
+
+Trawa
+Wiek / Sila / Pozycja :
+3
+0
+34
+19
+
+Trawa
+Wiek / Sila / Pozycja :
+3
+0
+35
+2
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+32
+5
+
+Trawa
+Wiek / Sila / Pozycja :
+3
+0
 25
-0
 8
-10
-Guarana
-23
-0
-5
+
+Trawa
+Wiek / Sila / Pozycja :
 3
-Trawa
-23
 0
-10
-10
-Wilcze Jagody
-23
-99
-9
+20
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+5
+19
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+15
+3
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+1
 6
-Trawa
-23
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
 0
-7
-9
-Trawa
-21
-0
-10
-9
-Guarana
-22
-0
-7
-2
-Wilcze Jagody
-22
-99
-9
-2
-Guarana
-22
-0
-5
-2
-Guarana
-21
-0
-4
-2
-Guarana
-21
-0
-8
-2
-Guarana
-19
-0
-4
-4
-Guarana
-19
-0
-5
-1
-Guarana
-19
-0
-9
-1
-Wilcze Jagody
-18
-99
-11
-5
-Wilcze Jagody
-18
-99
-9
-7
-Wilcze Jagody
+47
 17
-99
-9
-5
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+43
+16
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+14
+4
+
 Guarana
+Wiek / Sila / Pozycja :
+3
+0
+12
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+2
+14
+
+Trawa
+Wiek / Sila / Pozycja :
+3
+0
+37
+0
+
+Trawa
+Wiek / Sila / Pozycja :
+3
+0
+29
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+16
+2
+
+Guarana
+Wiek / Sila / Pozycja :
+3
+0
+49
+3
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+3
+99
+43
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+4
+15
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+33
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+34
+6
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+3
+3
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+3
+99
+45
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+3
+0
+30
+8
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+31
+8
+
+Trawa
+Wiek / Sila / Pozycja :
+2
+0
+2
+1
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+2
+99
+42
+2
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+1
+15
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+13
+1
+
+Trawa
+Wiek / Sila / Pozycja :
+2
+0
+23
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+5
+17
+
+Guarana
+Wiek / Sila / Pozycja :
+2
+0
+14
+7
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
 17
 0
-4
-0
-Guarana
-16
-0
-8
-5
-Wilcze Jagody
-16
-99
-10
-7
-Guarana
-16
-0
-6
-1
-Guarana
-16
-0
-3
-3
-Guarana
-16
-0
-5
-0
-Guarana
-16
-0
-10
-1
-Wilcze Jagody
-15
-99
-8
-3
-Wilcze Jagody
-15
-99
-10
-6
-Trawa
-15
-0
-11
-10
-Guarana
-15
-0
-6
+
+Mlecz
+Wiek / Sila / Pozycja :
 2
+0
+47
+16
+
 Trawa
+Wiek / Sila / Pozycja :
+2
+0
+36
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+12
+3
+
+Trawa
+Wiek / Sila / Pozycja :
+2
+0
+33
+0
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+31
+9
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+41
+19
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+4
+4
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+4
+5
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+29
+5
+
+Trawa
+Wiek / Sila / Pozycja :
+2
+0
+24
+8
+
+Trawa
+Wiek / Sila / Pozycja :
+2
+0
+20
+6
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+16
+4
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+0
+7
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
+0
+1
 14
+
+Trawa
+Wiek / Sila / Pozycja :
+2
 0
-8
-8
-Guarana
-14
+28
+2
+
+Mlecz
+Wiek / Sila / Pozycja :
+2
 0
-4
+2
 3
-Guarana
-14
-0
-6
-0
-Trawa
-14
-0
-11
-12
+
 Wilcze Jagody
-13
+Wiek / Sila / Pozycja :
+2
 99
-8
-4
+44
+0
+
 Trawa
-13
-0
-10
-11
-Trawa
-13
-0
-7
-8
-Wilcze Jagody
-13
-99
-9
-8
-Wilcze Jagody
-13
-99
-8
-6
-Guarana
-13
-0
-3
-4
-Wilcze Jagody
-12
-99
-9
-4
-Trawa
-12
-0
-6
-8
-Trawa
-11
-0
-7
-10
-Wilcze Jagody
-10
-99
-10
-3
-Guarana
-10
-0
-4
+Wiek / Sila / Pozycja :
 1
-Guarana
-10
 0
-7
-6
-Trawa
-10
-0
-12
-11
+33
+18
+
 Wilcze Jagody
-9
+Wiek / Sila / Pozycja :
+1
 99
-11
-3
-Wilcze Jagody
 9
-99
-10
-2
-Wilcze Jagody
-9
-99
-11
-6
-Trawa
-9
-0
-12
 13
-Trawa
-8
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
 0
-6
-9
-Guarana
-8
-0
-7
-7
-Wilcze Jagody
-8
-99
-12
-6
-Wilcze Jagody
-7
-99
-12
-5
-Guarana
-6
-0
-2
+13
 3
-Wilcze Jagody
-6
-99
-11
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+33
 7
+
 Guarana
-6
+Wiek / Sila / Pozycja :
+1
 0
-6
-6
+3
+8
+
 Trawa
-6
+Wiek / Sila / Pozycja :
+1
 0
-11
+58
+9
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+45
+17
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+45
+16
+
+Trawa
+Wiek / Sila / Pozycja :
+1
+0
+31
+3
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+1
+99
+41
+2
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+34
+7
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+6
+19
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+32
+9
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+43
 15
-Wilcze Jagody
-6
-99
-13
-6
-Trawa
-5
-0
-8
-12
-Trawa
-5
-0
-7
-11
-Trawa
-5
-0
-5
-7
-Trawa
-5
-0
-6
-10
-Trawa
-4
-0
-10
-8
-Guarana
-4
-0
-10
-0
-Trawa
-4
-0
-11
-9
-Trawa
-4
-0
-11
-13
-Guarana
-3
-0
-6
-4
-Trawa
-2
-0
-4
-6
-Guarana
-2
-0
-6
-5
-Trawa
-2
-0
-9
-11
-Wilcze Jagody
-2
-99
-8
-1
-Guarana
-2
-0
-4
-5
-Wilcze Jagody
-2
-99
-11
-2
-Guarana
-2
-0
-8
-7
-Wilcze Jagody
-2
-99
-12
-7
-Guarana
-2
-0
-2
-2
-Trawa
-2
-0
-5
-8
-Trawa
+
+Mlecz
+Wiek / Sila / Pozycja :
 1
 0
 3
-7
+14
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+17
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+17
+2
+
+Wilcze Jagody
+Wiek / Sila / Pozycja :
+1
+99
+46
+1
+
+Mlecz
+Wiek / Sila / Pozycja :
+1
+0
+47
+15

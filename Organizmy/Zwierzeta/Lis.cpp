@@ -13,7 +13,7 @@ Lis::Lis(Swiat* swiat,int x, int y,int wiek,int sila){
     this->typ="Lis";
 }
 
-Lis::Lis() {
+Lis::Lis(Swiat* swiat) {
     polozenie=new Punkt();
     this->swiat=swiat;
     this->sila=3;

@@ -20,6 +20,10 @@
 #include <thread>
 #include "fstream"
 
+#define X_SWIATA 60
+#define Y_SWIATA 20
+#define MAX_LICZBA_ORGANIZMOW_START 11
+
 int test0(Swiat* swiat);       //roslinnosc
 int test1(Swiat* swiat);       //zwierzeta
 int test2(Swiat* swiat);
@@ -35,12 +39,12 @@ int main() {
 
 
 
-    Swiat swiat(60, 20);
+    Swiat swiat(X_SWIATA, Y_SWIATA);
 
     if (!wczytanieZapisu()){
 
         if (
-                test0(&swiat) != 0) {
+                test1(&swiat) != 0) {
 
             return 0;
         }
@@ -85,26 +89,33 @@ int test0(Swiat(*swiat)) {
 }
 
 int test1(Swiat *swiat){
-
     swiat->zmienIloscTur();
-    for (int i = -2; i <=2; i++) {
-        for (int j = -2; j <= 2; j++) {
-            if(!((i>-2&&i<2)&&(j>-2&&j<2))) {
-                swiat->dodajOrganizm(new Antylopa(swiat, 9 +i, 9 + j));
-            }
+
+    vector <Organizm*> organizmy {new BarszczSosnowskiego(swiat),new Guarana(swiat), new Mlecz(swiat),
+                                  new Trawa(swiat),new WilczeJagody(swiat),new Antylopa(swiat),new Owca(swiat),
+                                  new Wilk(swiat),new Zolw(swiat),new Lis(swiat)};
+
+    for (int i = 0; i < organizmy.size(); ++i) {
+        int ilosc_na_mapie=rand() % MAX_LICZBA_ORGANIZMOW_START;
+        for (int j = 0; j < ilosc_na_mapie; ++j) {
+            int x=rand() % X_SWIATA;
+            int y=rand() % Y_SWIATA;
+
+            Organizm* organizm=organizmy[i]->Konstuktor(x,y);
+            swiat->dodajOrganizm(organizm);
         }
+
     }
+    int x=rand() % X_SWIATA;
+    int y=rand() % Y_SWIATA;
+    swiat->dodajOrganizm((new Czlowiek(swiat))->Konstuktor(x,y));
 
-    Zwierze* wilg=new Zolw(swiat, 9, 9);
-    swiat->dodajOrganizm(wilg);
-
-    for (int i = 0; i < swiat->GetIloscTur(); ++i) {
+    for (int i = 0; i < swiat->GetIloscTur()-1; i++) {
 
         if(swiat->Koniec!=0){
             return 1;
         }
-        //swiat->wykonajTure();
-        wait(200);
+        swiat->wykonajTure();
     }
     return 0;
 }
@@ -134,6 +145,7 @@ int test2(Swiat *swiat){
 
 
 int test3(Swiat *swiat){
+
     return 0;
 }
 
@@ -153,13 +165,17 @@ bool wczytanieZapisu() {
         ZAPIS.open("save.txt", std::ios::in);
         if (ZAPIS.is_open()) {
 
-            string x_s,y_s,tura_s,iloscTur_s,organizmy_s,umiejetnosc_s;
+            string x_s,y_s,tura_s,iloscTur_s,organizmy_s,umiejetnosc_s,INFO;
             int x,y,tura,iloscTur,organizmy,umiejetnosc;
+            getline(ZAPIS ,INFO);
             getline(ZAPIS ,x_s);
             getline(ZAPIS ,y_s);
+            getline(ZAPIS ,INFO);
             getline(ZAPIS ,tura_s);
             getline(ZAPIS ,iloscTur_s);
+            getline(ZAPIS ,INFO);
             getline(ZAPIS,umiejetnosc_s);
+            getline(ZAPIS ,INFO);
             getline(ZAPIS ,organizmy_s);
             x=stoi(x_s);
             y=stoi(y_s);
@@ -174,8 +190,10 @@ bool wczytanieZapisu() {
             for (int i = 0; i < organizmy; ++i) {
                 string typ,x_s2,y_s2,wiek_s,sila_s;
                 int x2,y2,wiek,sila;
+                getline(ZAPIS ,INFO);
 
                 getline(ZAPIS , typ);
+                getline(ZAPIS ,INFO);
                 getline(ZAPIS ,wiek_s);
                 getline(ZAPIS ,sila_s);
                 getline(ZAPIS ,x_s2);

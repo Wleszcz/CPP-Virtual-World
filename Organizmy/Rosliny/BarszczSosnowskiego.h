@@ -14,7 +14,7 @@ class BarszczSosnowskiego:
 public:
     BarszczSosnowskiego(Swiat* swiat,int x,int y,int wiek,int sila);
     BarszczSosnowskiego(Swiat* swiat, int x, int y);
-    BarszczSosnowskiego();
+    BarszczSosnowskiego(Swiat* swiat);
 
 
     Organizm *Konstuktor(int x,int y) override;

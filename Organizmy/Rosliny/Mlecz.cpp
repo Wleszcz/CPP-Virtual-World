@@ -20,7 +20,7 @@ Mlecz::Mlecz(Swiat *swiat, int x, int y) {
     this->typ="Mlecz";
 }
 
-Mlecz::Mlecz() {
+Mlecz::Mlecz(Swiat* swiat) {
     polozenie= new Punkt();
     this->swiat=swiat;
     this->sila=0;

@@ -25,7 +25,7 @@ BarszczSosnowskiego::BarszczSosnowskiego(Swiat *swiat, int x, int y) {
     this->symbol='X';
     this->typ="Barszcz Sosnowskiego";
 }
-BarszczSosnowskiego::BarszczSosnowskiego(){
+BarszczSosnowskiego::BarszczSosnowskiego(Swiat* swiat){
     polozenie= new Punkt();
     this->swiat=swiat;
     this->sila=0;

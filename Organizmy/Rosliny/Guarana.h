@@ -16,7 +16,7 @@ class Guarana:
 public:
     Guarana(Swiat* swiat,int x,int y,int wiek,int sila);
     Guarana(Swiat* swiat,int x, int y);
-    Guarana();
+    Guarana(Swiat* swiat);
 
 
     Organizm *Konstuktor(int x,int y) override;

@@ -13,7 +13,7 @@ Antylopa::Antylopa(Swiat *swiat, int x, int y,int wiek,int sila) {
     this->typ="Antylopa";
 }
 
-Antylopa::Antylopa() {
+Antylopa::Antylopa(Swiat* swiat) {
     polozenie=new Punkt();
     this->swiat=swiat;
     this->sila=4;

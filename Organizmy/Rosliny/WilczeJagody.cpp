@@ -31,7 +31,7 @@ void WilczeJagody::kolizja(Organizm *organizm) {
     swiat->plansza->AktualizujPlansze(swiat->organizmy);
 }
 
-WilczeJagody::WilczeJagody() {
+WilczeJagody::WilczeJagody(Swiat* swiat) {
     polozenie= new Punkt();
     this->swiat=swiat;
     this->sila=99;

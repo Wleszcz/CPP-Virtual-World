@@ -14,7 +14,7 @@ class Lis :
     public:
         Lis(Swiat* swiat,int x,int y,int wiek,int sila);
         Lis(Swiat* swiat,int x,int y);
-        Lis();
+        Lis(Swiat* swiat);
 
         Organizm *Konstuktor(int x,int y) override;
 

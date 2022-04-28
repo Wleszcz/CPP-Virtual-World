@@ -15,7 +15,7 @@ class Mlecz:
 public:
     Mlecz(Swiat* swiat,int x,int y,int wiek,int sila);
     Mlecz(Swiat* swiat,int x, int y);
-    Mlecz();
+    Mlecz(Swiat* swiat);
 
 
     Organizm *Konstuktor(int x,int y) override;

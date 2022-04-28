@@ -13,7 +13,7 @@ Wilk::Wilk(Swiat* swiat,int x, int y,int wiek,int sila){
     this->typ="Wilk";
 }
 
-Wilk::Wilk(){
+Wilk::Wilk(Swiat* swiat){
     polozenie=new Punkt();
     this->swiat=swiat;
     this->inicjatywa=5;

@@ -14,7 +14,7 @@ class Trawa:
 public:
     Trawa(Swiat* swiat,int x,int y,int wiek,int sila);
     Trawa(Swiat* swiat,int x, int y);
-    Trawa();
+    Trawa(Swiat* swiat);
 
     Organizm *Konstuktor(int x,int y) override;
 };

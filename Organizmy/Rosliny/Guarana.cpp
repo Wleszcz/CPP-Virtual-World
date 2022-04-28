@@ -19,7 +19,7 @@ Guarana::Guarana(Swiat *swiat, int x, int y) {
     this->symbol='g';
     this->typ="Guarana";
 }
-Guarana::Guarana() {
+Guarana::Guarana(Swiat* swiat) {
     polozenie= new Punkt();
     this->swiat=swiat;
     this->sila=0;

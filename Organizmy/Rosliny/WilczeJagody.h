@@ -13,7 +13,7 @@ public Roslina {
 public:
     WilczeJagody(Swiat* swiat,int x,int y,int wiek,int sila);
     WilczeJagody(Swiat *swiat, int x, int y);
-    WilczeJagody();
+    WilczeJagody(Swiat* swiat);
 
 
     Organizm *Konstuktor(int x, int y) override;

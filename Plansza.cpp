@@ -88,9 +88,12 @@ bool Plansza::CzyPusty(int x, int y){
     return false;
 }
 
-bool Plansza::CzyMaZwierze(int x, int y){
-    if(Zwierze* t = dynamic_cast<Zwierze*>(getOrganizm(x,y))){
-        return true;
+bool Plansza::CzyMaZwierze(int x, int y) {
+    if (!CzyPusty(x, y)) {
+        if (Zwierze *t = dynamic_cast<Zwierze *>(getOrganizm(x, y))) {
+            return true;
+        }
+        return false;
     }
     return false;
 }

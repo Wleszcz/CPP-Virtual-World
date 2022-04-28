@@ -20,7 +20,7 @@ Trawa::Trawa(Swiat* swiat,int x, int y){
     this->typ="Trawa";
 }
 
-Trawa::Trawa(){
+Trawa::Trawa(Swiat* swiat){
     polozenie=new Punkt();
     this->swiat=swiat;
     this->sila=0;

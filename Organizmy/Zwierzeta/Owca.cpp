@@ -13,7 +13,7 @@ Owca::Owca(Swiat* swiat,int x, int y,int wiek,int sila){
     this->typ="Owca";
 }
 
-Owca::Owca() {
+Owca::Owca(Swiat* swiat) {
     polozenie=new Punkt();
     this->swiat=swiat;
     this->sila=4;

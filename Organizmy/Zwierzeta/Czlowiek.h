@@ -15,7 +15,7 @@ public Zwierze
     public:
         Czlowiek(Swiat* swiat,int x,int y,int wiek,int sila,int umiejstnosc);
         Czlowiek(Swiat* swiat,int x,int y);
-        Czlowiek();
+        Czlowiek(Swiat* swiat);
         void Umiejetnosc();
         void UmiejetnoscWczytanie(bool uzyto, bool trwa);
 

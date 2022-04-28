@@ -14,7 +14,7 @@ class Wilk:
 public:
     Wilk(Swiat* swiat,int x,int y,int wiek,int sila);
     Wilk(Swiat* swiat,int x, int y);
-    Wilk();
+    Wilk(Swiat* swiat);
 
     Organizm *Konstuktor(int x,int y) override;
 
