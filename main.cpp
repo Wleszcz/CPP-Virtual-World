@@ -25,52 +25,54 @@
 #define MAX_LICZBA_ORGANIZMOW_START 11
 
 
-int test0(Swiat* swiat);
-int NowaLosowaGra(Swiat *swiat) ;
+int test0(Swiat *swiat);
+
+int NowaLosowaGra(Swiat *swiat);
+
 void wait(int czas);
+
 bool wczytanieZapisu();
 
 
 using namespace std;
 
 
-
 int main() {
     std::srand(std::time(nullptr));
 
-    if (!wczytanieZapisu()){
-            Swiat swiat(X_SWIATA, Y_SWIATA);
-            if (NowaLosowaGra(&swiat) != 0) {
-                return 0;
+    if (!wczytanieZapisu()) {
+        Swiat swiat(X_SWIATA, Y_SWIATA);
+        if (NowaLosowaGra(&swiat) != 0) {
+            return 0;
         }
     }
 }
 
-int NowaLosowaGra(Swiat *swiat){
+int NowaLosowaGra(Swiat *swiat) {
     swiat->zmienIloscTur();
 
-    vector <Organizm*> organizmy {new BarszczSosnowskiego(swiat),new Guarana(swiat), new Mlecz(swiat),
-                                  new Trawa(swiat),new WilczeJagody(swiat),new Antylopa(swiat),new Owca(swiat),
-                                  new Wilk(swiat),new Zolw(swiat),new Lis(swiat)};
+    vector<Organizm *> organizmy{new BarszczSosnowskiego(swiat), new Guarana(swiat), new Mlecz(swiat),
+                                 new Trawa(swiat), new WilczeJagody(swiat), new Antylopa(swiat), new Owca(swiat),
+                                 new Wilk(swiat), new Zolw(swiat), new Lis(swiat)};
 
     for (int i = 0; i < organizmy.size(); ++i) {
-        int ilosc_na_mapie=rand() % MAX_LICZBA_ORGANIZMOW_START;
+        int ilosc_na_mapie = rand() % MAX_LICZBA_ORGANIZMOW_START;
         for (int j = 0; j < ilosc_na_mapie; ++j) {
-            int x=rand() % X_SWIATA;
-            int y=rand() % Y_SWIATA;
+            int x = rand() % X_SWIATA;
+            int y = rand() % Y_SWIATA;
 
-            Organizm* organizm=organizmy[i]->Konstuktor(x,y);
+            Organizm *organizm = organizmy[i]->Konstuktor(x, y);
             swiat->dodajOrganizm(organizm);
         }
 
     }
-    int x=rand() % X_SWIATA;
-    int y=rand() % Y_SWIATA;
-    swiat->dodajOrganizm((new Czlowiek(swiat))->Konstuktor(x,y));
+    int x = rand() % X_SWIATA;
+    int y = rand() % Y_SWIATA;
+    swiat->dodajOrganizm((new Czlowiek(swiat))->Konstuktor(x, y));
 
-    for (int i = 0; i < swiat->GetIloscTur()-1; i++) {
+    for (int i = 0; i < swiat->GetIloscTur() - 1; i++) {
         wait(200);
-        if(swiat->Koniec!=0){
+        if (swiat->Koniec != 0) {
             return 1;
         }
         swiat->wykonajTure();
@@ -80,82 +82,82 @@ int NowaLosowaGra(Swiat *swiat){
 
 
 bool wczytanieZapisu() {
-    cout<<"Czy chcesz wczytac zapis? (T/N)"<<endl;
+    cout << "Czy chcesz wczytac zapis? (T/N)" << endl;
     char opc;
 
-    cin>>opc;
-    if(opc=='n'|| opc=='N'){
+    cin >> opc;
+    if (opc == 'n' || opc == 'N') {
         return false;
-    }
-    else if(opc=='t' || opc=='T') {
+    } else if (opc == 't' || opc == 'T') {
 
 
         std::ifstream ZAPIS;
         ZAPIS.open("save.txt", std::ios::in);
         if (ZAPIS.is_open()) {
 
-            string x_s,y_s,tura_s,iloscTur_s,organizmy_s,umiejetnosc_s,INFO;
-            int x,y,tura,iloscTur,organizmy,umiejetnosc;
-            getline(ZAPIS ,INFO);
-            getline(ZAPIS ,x_s);
-            getline(ZAPIS ,y_s);
-            getline(ZAPIS ,INFO);
-            getline(ZAPIS ,tura_s);
-            getline(ZAPIS ,iloscTur_s);
-            getline(ZAPIS ,INFO);
-            getline(ZAPIS,umiejetnosc_s);
-            getline(ZAPIS ,INFO);
-            getline(ZAPIS ,organizmy_s);
-            x=stoi(x_s);
-            y=stoi(y_s);
-            tura=stoi(tura_s);
-            iloscTur=stoi(iloscTur_s);
-            umiejetnosc= stoi(umiejetnosc_s);
-            organizmy=stoi(organizmy_s);
+            string x_s, y_s, tura_s, iloscTur_s, organizmy_s, umiejetnosc_s, INFO;
+            int x, y, tura, iloscTur, organizmy, umiejetnosc;
+            getline(ZAPIS, INFO);
+            getline(ZAPIS, x_s);
+            getline(ZAPIS, y_s);
+            getline(ZAPIS, INFO);
+            getline(ZAPIS, tura_s);
+            getline(ZAPIS, iloscTur_s);
+            getline(ZAPIS, INFO);
+            getline(ZAPIS, umiejetnosc_s);
+            getline(ZAPIS, INFO);
+            getline(ZAPIS, organizmy_s);
+            x = stoi(x_s);
+            y = stoi(y_s);
+            tura = stoi(tura_s);
+            iloscTur = stoi(iloscTur_s);
+            umiejetnosc = stoi(umiejetnosc_s);
+            organizmy = stoi(organizmy_s);
 
-            Swiat swiat(x, y,tura,iloscTur);
+            Swiat swiat(x, y, tura, iloscTur);
 
 
             for (int i = 0; i < organizmy; ++i) {
-                string typ,x_s2,y_s2,wiek_s,sila_s;
-                int x2,y2,wiek,sila;
-                getline(ZAPIS ,INFO);
+                string typ, x_s2, y_s2, wiek_s, sila_s;
+                int x2, y2, wiek, sila;
+                getline(ZAPIS, INFO);
 
-                getline(ZAPIS , typ);
-                getline(ZAPIS ,INFO);
-                getline(ZAPIS ,wiek_s);
-                getline(ZAPIS ,sila_s);
-                getline(ZAPIS ,x_s2);
-                getline(ZAPIS ,y_s2);
+                getline(ZAPIS, typ);
+                getline(ZAPIS, INFO);
+                getline(ZAPIS, wiek_s);
+                getline(ZAPIS, sila_s);
+                getline(ZAPIS, x_s2);
+                getline(ZAPIS, y_s2);
 
 
-                wiek=stoi(wiek_s);
-                sila= stoi(sila_s);
-                x= stoi(x_s2);
-                y= stoi(y_s2);
+                wiek = stoi(wiek_s);
+                sila = stoi(sila_s);
+                x = stoi(x_s2);
+                y = stoi(y_s2);
 
-                if(typ=="Owca"){
-                    swiat.dodajOrganizm(new Owca(&swiat,x,y,wiek,sila));}
-                else if(typ=="Wilk"){
-                    swiat.dodajOrganizm(new Wilk(&swiat,x,y,wiek,sila));}
-                else if(typ=="Lis"){
-                    swiat.dodajOrganizm(new Lis(&swiat,x,y,wiek,sila));}
-                else if(typ=="Zolw"){
-                    swiat.dodajOrganizm(new Zolw(&swiat,x,y,wiek,sila));}
-                else if(typ=="Antylopa"){
-                    swiat.dodajOrganizm(new Antylopa(&swiat,x,y,wiek,sila));}
-                else if(typ=="Czlowiek"){
-                    swiat.dodajOrganizm(new Czlowiek(&swiat,x,y,wiek,sila,umiejetnosc));}
-                else if(typ=="Barszcz Sosnowskiego"){
-                    swiat.dodajOrganizm(new BarszczSosnowskiego(&swiat,x,y,wiek,sila));}
-                else if(typ=="Guarana"){
-                    swiat.dodajOrganizm(new Guarana(&swiat,x,y,wiek,sila));}
-                else if(typ=="Mlecz"){
-                    swiat.dodajOrganizm(new Mlecz(&swiat,x,y,wiek,sila));}
-                else if(typ=="Trawa"){
-                    swiat.dodajOrganizm(new Trawa(&swiat,x,y,wiek,sila));}
-                else if(typ=="Wilcze Jagody"){
-                    swiat.dodajOrganizm(new WilczeJagody(&swiat,x,y,wiek,sila));}
+                if (typ == "Owca") {
+                    swiat.dodajOrganizm(new Owca(&swiat, x, y, wiek, sila));
+                } else if (typ == "Wilk") {
+                    swiat.dodajOrganizm(new Wilk(&swiat, x, y, wiek, sila));
+                } else if (typ == "Lis") {
+                    swiat.dodajOrganizm(new Lis(&swiat, x, y, wiek, sila));
+                } else if (typ == "Zolw") {
+                    swiat.dodajOrganizm(new Zolw(&swiat, x, y, wiek, sila));
+                } else if (typ == "Antylopa") {
+                    swiat.dodajOrganizm(new Antylopa(&swiat, x, y, wiek, sila));
+                } else if (typ == "Czlowiek") {
+                    swiat.dodajOrganizm(new Czlowiek(&swiat, x, y, wiek, sila, umiejetnosc));
+                } else if (typ == "Barszcz Sosnowskiego") {
+                    swiat.dodajOrganizm(new BarszczSosnowskiego(&swiat, x, y, wiek, sila));
+                } else if (typ == "Guarana") {
+                    swiat.dodajOrganizm(new Guarana(&swiat, x, y, wiek, sila));
+                } else if (typ == "Mlecz") {
+                    swiat.dodajOrganizm(new Mlecz(&swiat, x, y, wiek, sila));
+                } else if (typ == "Trawa") {
+                    swiat.dodajOrganizm(new Trawa(&swiat, x, y, wiek, sila));
+                } else if (typ == "Wilcze Jagody") {
+                    swiat.dodajOrganizm(new WilczeJagody(&swiat, x, y, wiek, sila));
+                }
             }
             ZAPIS.close();
             swiat.rysujSwiat();
@@ -165,9 +167,8 @@ bool wczytanieZapisu() {
             }
 
             return true;
-        }
-        else{
-            cout<<"Blad wczytywania Zapisu !"<<endl;
+        } else {
+            cout << "Blad wczytywania Zapisu !" << endl;
             return false;
         }
     }
@@ -175,10 +176,9 @@ bool wczytanieZapisu() {
 
 
 void wait(int czas) {
-        std::chrono::milliseconds timespan(czas);
-        std::this_thread::sleep_for(timespan);
-    };
-
+    std::chrono::milliseconds timespan(czas);
+    std::this_thread::sleep_for(timespan);
+};
 
 
 int test0(Swiat(*swiat)) {

@@ -4,34 +4,42 @@
 
 #ifndef UNTITLED_PLANSZA_H
 #define UNTITLED_PLANSZA_H
+
 #include <ostream>
 #include <vector>
 #include "Organizmy/Organizm.h"
 
 class Organizm;
+
 class Swiat;
 
-class Plansza{
+class Plansza {
 public:
     Plansza(int x, int y);
-    void PostawOrganizm(Organizm* organizm);
+
+    void PostawOrganizm(Organizm *organizm);
+
     void RysujPlansze();
+
     void AktualizujPlansze(std::vector<Organizm *> vector);
-    Organizm* getOrganizm(int x,int y);
+
+    Organizm *getOrganizm(int x, int y);
 
     bool CzyMaZwierze(int x, int y);
-    bool poprawnyRuch(int,int);
+
+    bool poprawnyRuch(int, int);
+
     bool CzyPusty(int x, int y);
 
     int GetX();
+
     int GetY();
 
 
 private:
     int x;
     int y;
-    Organizm*** pola;
-
+    Organizm ***pola;
 
 
 };

@@ -8,18 +8,17 @@
 
 #include "../Roslina.h"
 
-class Trawa:
-        public Roslina
-{
+class Trawa :
+        public Roslina {
 public:
-    Trawa(Swiat* swiat,int x,int y,int wiek,int sila);
-    Trawa(Swiat* swiat,int x, int y);
-    Trawa(Swiat* swiat);
+    Trawa(Swiat *swiat, int x, int y, int wiek, int sila);
 
-    Organizm *Konstuktor(int x,int y) override;
+    Trawa(Swiat *swiat, int x, int y);
+
+    Trawa(Swiat *swiat);
+
+    Organizm *Konstuktor(int x, int y) override;
 };
-
-
 
 
 #endif //UNTITLED_TRAWA_H

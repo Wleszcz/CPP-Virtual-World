@@ -6,16 +6,18 @@
 #define UNTITLED_OWCA_H
 
 #include "../Zwierze.h"
+
 class Owca :
-        public Zwierze
-
-{
+        public Zwierze {
 public:
-    Owca(Swiat* swiat,int x,int y,int wiek,int sila);
-    Owca(Swiat* swiat,int x,int y);
-    Owca(Swiat* swiat);
+    Owca(Swiat *swiat, int x, int y, int wiek, int sila);
 
-    Organizm *Konstuktor(int x,int y) override;
+    Owca(Swiat *swiat, int x, int y);
+
+    Owca(Swiat *swiat);
+
+    Organizm *Konstuktor(int x, int y) override;
 
 };
+
 #endif //UNTITLED_OWCA_H

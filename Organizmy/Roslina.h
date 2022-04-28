@@ -7,15 +7,16 @@
 
 
 #include "Organizm.h"
+
 class Roslina :
-        public Organizm
-{
+        public Organizm {
 public:
     //Roslina(int x,int y,int sila,char symbol);
 
     void akcja() override;
 
     void kolizja(Organizm *organizm) override;
+
     bool CzyOdbilAtak(Organizm *napastnik) override;
 
 protected:

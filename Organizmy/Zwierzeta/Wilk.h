@@ -8,15 +8,16 @@
 
 #include "../Zwierze.h"
 
-class Wilk:
-        public Zwierze
-{
+class Wilk :
+        public Zwierze {
 public:
-    Wilk(Swiat* swiat,int x,int y,int wiek,int sila);
-    Wilk(Swiat* swiat,int x, int y);
-    Wilk(Swiat* swiat);
+    Wilk(Swiat *swiat, int x, int y, int wiek, int sila);
 
-    Organizm *Konstuktor(int x,int y) override;
+    Wilk(Swiat *swiat, int x, int y);
+
+    Wilk(Swiat *swiat);
+
+    Organizm *Konstuktor(int x, int y) override;
 
 
 };

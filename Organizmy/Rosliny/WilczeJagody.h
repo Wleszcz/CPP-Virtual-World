@@ -9,11 +9,13 @@
 #include "../Roslina.h"
 
 class WilczeJagody :
-public Roslina {
+        public Roslina {
 public:
-    WilczeJagody(Swiat* swiat,int x,int y,int wiek,int sila);
+    WilczeJagody(Swiat *swiat, int x, int y, int wiek, int sila);
+
     WilczeJagody(Swiat *swiat, int x, int y);
-    WilczeJagody(Swiat* swiat);
+
+    WilczeJagody(Swiat *swiat);
 
 
     Organizm *Konstuktor(int x, int y) override;
@@ -22,4 +24,5 @@ public:
 
 
 };
+
 #endif //UNTITLED_WILCZEJAGODY_H

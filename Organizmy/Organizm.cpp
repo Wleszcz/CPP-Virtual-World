@@ -8,48 +8,54 @@
 int Organizm::getX() {
     return polozenie->getX();
 }
+
 int Organizm::getY() {
     return polozenie->getY();
 }
+
 int Organizm::getWiek() const {
     return wiek;
 }
-int Organizm::getInicjatywa() const{
+
+int Organizm::getInicjatywa() const {
     return inicjatywa;
 }
+
 int Organizm::getSila() const {
-    return  sila;
+    return sila;
 }
 
 char Organizm::getSymbol() const {
     return symbol;
 }
-void Organizm::starzejSie(){
+
+void Organizm::starzejSie() {
     wiek++;
 }
+
 void Organizm::umrzyj() {
-    zywy=false;
+    zywy = false;
 }
+
 bool Organizm::CzyZyje() const {
     return zywy;
 }
+
 void Organizm::ruch(int x, int y) {
 
-    if (!swiat->plansza->CzyPusty(x, y) && swiat->plansza->getOrganizm(x,y)!=this){
+    if (!swiat->plansza->CzyPusty(x, y) && swiat->plansza->getOrganizm(x, y) != this) {
 
-        if(swiat->plansza->getOrganizm(x,y)->typ==this->typ){
-            swiat->plansza->getOrganizm(x,y)->kolizja(this);
-        }
-        else {
+        if (swiat->plansza->getOrganizm(x, y)->typ == this->typ) {
+            swiat->plansza->getOrganizm(x, y)->kolizja(this);
+        } else {
             if (!(swiat->plansza->getOrganizm(x, y)->CzyOdbilAtak(this))) {
-                swiat->plansza->getOrganizm(x,y)->kolizja(this);
+                swiat->plansza->getOrganizm(x, y)->kolizja(this);
                 polozenie->setX(x);
                 polozenie->setY(y);
             }
         }
 
-    }
-    else{
+    } else {
         polozenie->setX(x);
         polozenie->setY(y);
     }
@@ -59,44 +65,42 @@ void Organizm::ruch(int x, int y) {
 }
 
 
-
 void Organizm::BonusSila() {
-    sila=sila*3;
+    sila = sila * 3;
 }
 
 std::string Organizm::getTyp() {
     return typ;
 }
 
-Punkt* Organizm::losowePoleObok() {
-    int xK,yK;
+Punkt *Organizm::losowePoleObok() {
+    int xK, yK;
     while (true) {
         int x1 = rand() % 3;
         int y1 = rand() % 3;
 
-        int x = getX()-1+x1;
-        int y = getY()-1+y1;
+        int x = getX() - 1 + x1;
+        int y = getY() - 1 + y1;
 
-        if (this->swiat->plansza->poprawnyRuch(x,y) && !(x==0 && y==0)) {
-            xK=x;
-            yK=y;
+        if (this->swiat->plansza->poprawnyRuch(x, y) && !(x == 0 && y == 0)) {
+            xK = x;
+            yK = y;
             break;
         }
     }
-    return new Punkt(xK,yK);
+    return new Punkt(xK, yK);
 }
 
 bool Organizm::CzyGotowy() const {
-    if(this->gotowy==true){
+    if (this->gotowy == true) {
         return 1;
-    }
-    else{
+    } else {
         return 0;
     }
 }
 
 void Organizm::Gotowy(bool zmienna) {
-    this->gotowy=zmienna;
+    this->gotowy = zmienna;
 }
 
 

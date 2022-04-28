@@ -8,129 +8,120 @@
 #define SILA 5
 
 using namespace std;
+
 Czlowiek::Czlowiek(Swiat *swiat, int x, int y, int wiek, int sila, int umiejstnosc) {
-    this->swiat=swiat;
-    polozenie=new Punkt(x,y);
-    this->sila=sila;
-    this->wiek=wiek;
-    this->inicjatywa=4;
-    this->symbol='Y';
-    this->typ="Czlowiek";
-    if(umiejstnosc==11){
-        umiejetnoscTrwa= true;
-        uzytoUmiejstnosc= true;
-    }
-    else if(umiejstnosc==0){
-        uzytoUmiejstnosc= true;
-        umiejetnoscTrwa= false;
-    }
-    else {
-        umiejetnoscTrwa= false;
-        uzytoUmiejstnosc= false;
+    this->swiat = swiat;
+    polozenie = new Punkt(x, y);
+    this->sila = sila;
+    this->wiek = wiek;
+    this->inicjatywa = 4;
+    this->symbol = 'Y';
+    this->typ = "Czlowiek";
+    if (umiejstnosc == 11) {
+        umiejetnoscTrwa = true;
+        uzytoUmiejstnosc = true;
+    } else if (umiejstnosc == 0) {
+        uzytoUmiejstnosc = true;
+        umiejetnoscTrwa = false;
+    } else {
+        umiejetnoscTrwa = false;
+        uzytoUmiejstnosc = false;
     }
 }
 
-Czlowiek::Czlowiek(Swiat* swiat) {
-    polozenie=new Punkt();
-    this->swiat=swiat;
-    this->sila=SILA;
-    this->inicjatywa=4;
-    this->symbol='Y';
-    this->typ="Czlowiek";
-    umiejetnoscTrwa= false;
-    uzytoUmiejstnosc= false;
+Czlowiek::Czlowiek(Swiat *swiat) {
+    polozenie = new Punkt();
+    this->swiat = swiat;
+    this->sila = SILA;
+    this->inicjatywa = 4;
+    this->symbol = 'Y';
+    this->typ = "Czlowiek";
+    umiejetnoscTrwa = false;
+    uzytoUmiejstnosc = false;
 }
 
 Czlowiek::Czlowiek(Swiat *swiat, int x, int y) {
-    this->swiat=swiat;
-    polozenie=new Punkt(x,y);
-    this->sila=SILA;
-    this->inicjatywa=4;
-    this->symbol='Y';
-    this->typ="Czlowiek";
-    umiejetnoscTrwa= false;
-    uzytoUmiejstnosc= false;
+    this->swiat = swiat;
+    polozenie = new Punkt(x, y);
+    this->sila = SILA;
+    this->inicjatywa = 4;
+    this->symbol = 'Y';
+    this->typ = "Czlowiek";
+    umiejetnoscTrwa = false;
+    uzytoUmiejstnosc = false;
 }
 
 Organizm *Czlowiek::Konstuktor(int x, int y) {
-    return new Czlowiek(swiat,x,y);
+    return new Czlowiek(swiat, x, y);
 }
 
 void Czlowiek::akcja() {
-    this->swiat->InformacjeOUmiejetnosc=UmiejetnoscInfo();
+    this->swiat->InformacjeOUmiejetnosc = UmiejetnoscInfo();
     char c;
-    cin>>c;
-    int x=getX();
-    int y=getY();
-    if(c=='w'){
+    cin >> c;
+    int x = getX();
+    int y = getY();
+    if (c == 'w') {
         y--;
-    }
-    else if(c=='s'){
+    } else if (c == 's') {
         y++;
-    }
-    else if(c=='a'){
+    } else if (c == 'a') {
         x--;
-    }
-    else if(c=='d'){
+    } else if (c == 'd') {
         x++;
-    }
-    else if(c=='u'){
+    } else if (c == 'u') {
         Umiejetnosc();
-    }
-    else if(c=='q'){
-        std::cout<<"Czy Zakonczyc Gre ?  (T/N) "<<std::endl;
+    } else if (c == 'q') {
+        std::cout << "Czy Zakonczyc Gre ?  (T/N) " << std::endl;
         char kom;
-        cin>>kom;
-        if(kom=='t' || kom =='T'){
-            swiat->Koniec=true;
-        }
-        else if(kom=='n' || kom =='N'){
+        cin >> kom;
+        if (kom == 't' || kom == 'T') {
+            swiat->Koniec = true;
+        } else if (kom == 'n' || kom == 'N') {
             this->akcja();
         }
-    }
-    else if (c=='z'){
+    } else if (c == 'z') {
         swiat->zapiszSwiat();
-        cout<<"Zapisano Swiat"<<endl;
+        cout << "Zapisano Swiat" << endl;
         this->akcja();
         this->swiat->plansza->AktualizujPlansze(this->swiat->organizmy);
     }
-    if(swiat->plansza->poprawnyRuch(x,y)){
-        ruch(x,y);
+    if (swiat->plansza->poprawnyRuch(x, y)) {
+        ruch(x, y);
     }
 }
 
 void Czlowiek::umrzyj() {
     Organizm::umrzyj();
-    std::cout<<"Czy chcesz kontynuowac ?  (T/N) "<<std::endl;
+    std::cout << "Czy chcesz kontynuowac ?  (T/N) " << std::endl;
     char kom;
-    cin>>kom;
-    if(kom=='t' || kom =='T'){
-    }
-    else if(kom=='n' || kom =='N'){
-        swiat->Koniec=true;
+    cin >> kom;
+    if (kom == 't' || kom == 'T') {
+    } else if (kom == 'n' || kom == 'N') {
+        swiat->Koniec = true;
     }
 
 }
 
 void Czlowiek::Umiejetnosc() {
-    if(sila <= 10){
-        if(!uzytoUmiejstnosc){
-            umiejetnoscTrwa= true;
-            uzytoUmiejstnosc=true;
-            cout<<"UZYTO UMIEJETNOSCI"<<endl;
-            sila = 10+1;
+    if (sila <= 10) {
+        if (!uzytoUmiejstnosc) {
+            umiejetnoscTrwa = true;
+            uzytoUmiejstnosc = true;
+            cout << "UZYTO UMIEJETNOSCI" << endl;
+            sila = 10 + 1;
         }
-        cout<<"Umiejetnosc jest juz wykorzystana"<<endl;
+        cout << "Umiejetnosc jest juz wykorzystana" << endl;
         this->akcja();
     }
 }
 
 void Czlowiek::starzejSie() {
 
-    if(umiejetnoscTrwa){
-        if(sila==SILA+1){
-            umiejetnoscTrwa=false;
-            cout<<"KONIEC DZIALANIA UMIEJETNOSCI"<<endl;
+    if (umiejetnoscTrwa) {
+        if (sila == SILA + 1) {
+            umiejetnoscTrwa = false;
+            cout << "KONIEC DZIALANIA UMIEJETNOSCI" << endl;
         }
         sila--;
     }
@@ -147,9 +138,9 @@ bool Czlowiek::CzyUmWykorzystana() {
 }
 
 int Czlowiek::UmiejetnoscInfo() const {
-    if(umiejetnoscTrwa && uzytoUmiejstnosc){return 11;}
-    else if(!umiejetnoscTrwa && uzytoUmiejstnosc){return 0;}
-    else if(!umiejetnoscTrwa && !uzytoUmiejstnosc){return 1;}
+    if (umiejetnoscTrwa && uzytoUmiejstnosc) { return 11; }
+    else if (!umiejetnoscTrwa && uzytoUmiejstnosc) { return 0; }
+    else if (!umiejetnoscTrwa && !uzytoUmiejstnosc) { return 1; }
 
 }
 

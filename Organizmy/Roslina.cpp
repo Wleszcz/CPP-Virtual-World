@@ -10,17 +10,14 @@ void Roslina::akcja() {
 }
 
 void Roslina::kolizja(Organizm *organizm) {
-    if(typ==organizm->getTyp()) {
+    if (typ == organizm->getTyp()) {
         //rozmnozSie();
-    }
-    else{
-        if(getSila()>organizm->getSila()){
+    } else {
+        if (getSila() > organizm->getSila()) {
             organizm->umrzyj();
-        }
-        else if(getSila()<organizm->getSila()){
+        } else if (getSila() < organizm->getSila()) {
             umrzyj();
-        }
-        else {
+        } else {
             umrzyj();
             organizm->umrzyj();
         }
@@ -30,16 +27,17 @@ void Roslina::kolizja(Organizm *organizm) {
 void Roslina::rozmnozSie() {
     int szansa = rand() % 4;
     if (this->wiek != 0 && szansa == 0) {
-        Punkt* pole=losowePoleObok();
+        Punkt *pole = losowePoleObok();
         int x = pole->getX();
-        int y =pole->getY();
+        int y = pole->getY();
 
         if (swiat->plansza->CzyPusty(x, y)) {
-             Organizm *organizm = this->Konstuktor(x,y);
-             swiat->dodajOrganizm(organizm);
+            Organizm *organizm = this->Konstuktor(x, y);
+            swiat->dodajOrganizm(organizm);
+        }
     }
 }
-}
+
 bool Roslina::CzyOdbilAtak(Organizm *organizm) {
     return false;
 }

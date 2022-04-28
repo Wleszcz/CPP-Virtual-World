@@ -6,25 +6,24 @@
 #define UNTITLED_MLECZ_H
 
 
-
 #include "../Roslina.h"
 
-class Mlecz:
-        public Roslina
-{
+class Mlecz :
+        public Roslina {
 public:
-    Mlecz(Swiat* swiat,int x,int y,int wiek,int sila);
-    Mlecz(Swiat* swiat,int x, int y);
-    Mlecz(Swiat* swiat);
+    Mlecz(Swiat *swiat, int x, int y, int wiek, int sila);
+
+    Mlecz(Swiat *swiat, int x, int y);
+
+    Mlecz(Swiat *swiat);
 
 
-    Organizm *Konstuktor(int x,int y) override;
+    Organizm *Konstuktor(int x, int y) override;
 
     void akcja() override;
 
 
 };
-
 
 
 #endif //UNTITLED_MLECZ_H

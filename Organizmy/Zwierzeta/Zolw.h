@@ -6,19 +6,23 @@
 #define UNTITLED_ZOLW_H
 
 #include "../Zwierze.h"
-class Zolw :
-        public Zwierze
-{
-public:
-    Zolw(Swiat* swiat,int x,int y,int wiek,int sila);
-    Zolw(Swiat* swiat,int x,int y);
-    Zolw(Swiat* swiat);
 
-    Organizm *Konstuktor(int x,int y) override;
+class Zolw :
+        public Zwierze {
+public:
+    Zolw(Swiat *swiat, int x, int y, int wiek, int sila);
+
+    Zolw(Swiat *swiat, int x, int y);
+
+    Zolw(Swiat *swiat);
+
+    Organizm *Konstuktor(int x, int y) override;
 
     void akcja() override;
+
     void kolizja(Organizm *organizm) override;
 
-    bool CzyOdbilAtak(Organizm* napastnik) override;
+    bool CzyOdbilAtak(Organizm *napastnik) override;
 };
+
 #endif //UNTITLED_ZOLW_H

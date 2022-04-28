@@ -5,46 +5,47 @@
 #include "Zwierze.h"
 
 void Zwierze::akcja() {
-    Punkt* pole=losowePoleObok();
-    ruch(pole->getX(),pole->getY());
+    Punkt *pole = losowePoleObok();
+    ruch(pole->getX(), pole->getY());
     swiat->plansza->AktualizujPlansze(swiat->organizmy);
 }
 
 void Zwierze::kolizja(Organizm *organizm) {
-        if ((typ == organizm->getTyp())) {
-            if (organizm->getWiek() != 0 && this->gotowy && organizm->CzyGotowy() && !(this->polaObokZajete())) {
-                rozmnozSie();
-                gotowy = false;
-                organizm->Gotowy(false);
+    if ((typ == organizm->getTyp())) {
+        if (organizm->getWiek() != 0 && this->gotowy && organizm->CzyGotowy() && !(this->polaObokZajete())) {
+            rozmnozSie();
+            gotowy = false;
+            organizm->Gotowy(false);
+        }
+    } else {
+        if (getSila() > organizm->getSila()) {
+
+            if (swiat->Narrator) {
+                std::cout << organizm->getTyp() << " zostal zjedzony przez " << typ << std::endl;
             }
+            organizm->umrzyj();
+        } else if (getSila() < organizm->getSila()) {
+
+            if (swiat->Narrator) {
+                std::cout << typ << " zostal zjedzony przez " << organizm->getTyp() << std::endl;
+            }
+            umrzyj();
         } else {
-            if (getSila() > organizm->getSila()) {
-
-                if(swiat->Narrator) {
-                    std::cout << organizm->getTyp() << " zostal zjedzony przez " << typ << std::endl;
-                }
-                organizm->umrzyj();
-            } else if (getSila() < organizm->getSila()) {
-
-                if(swiat->Narrator) {
-                    std::cout << typ << " zostal zjedzony przez " << organizm->getTyp() << std::endl;
-                }
-                umrzyj();
-            } else {
-                if(swiat->Narrator) {
-                    std::cout << typ << " i " << organizm->getTyp() << " zjadly sie nawzajem" << std::endl;
-                }
-                umrzyj();
-                organizm->umrzyj();
+            if (swiat->Narrator) {
+                std::cout << typ << " i " << organizm->getTyp() << " zjadly sie nawzajem" << std::endl;
             }
+            umrzyj();
+            organizm->umrzyj();
         }
     }
+}
 
-bool Zwierze::polaObokZajete(){
-    bool zajete= true;
-    for (int i = -1; i <=1; ++i) {
+bool Zwierze::polaObokZajete() {
+    bool zajete = true;
+    for (int i = -1; i <= 1; ++i) {
         for (int j = -1; j <= 1; ++j) {
-            if(swiat->plansza->poprawnyRuch(getX()+i,getY()+j) && !(swiat->plansza->CzyPusty(getX()+i,getY()+j))){
+            if (swiat->plansza->poprawnyRuch(getX() + i, getY() + j) &&
+                !(swiat->plansza->CzyPusty(getX() + i, getY() + j))) {
                 return false;
             }
         }
@@ -73,13 +74,12 @@ void Zwierze::rozmnozSie() {
 
 
 bool Zwierze::CzyOdbilAtak(Organizm *napastnik) {
-        if(napastnik->getSila() > sila){
-            return false;
-        }
-        else{
-            return true;
-        }
+    if (napastnik->getSila() > sila) {
+        return false;
+    } else {
+        return true;
     }
+}
 
 
 

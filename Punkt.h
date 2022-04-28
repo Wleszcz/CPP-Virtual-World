@@ -7,13 +7,13 @@
 #define UNTITLED_PUNKT_H
 
 
-
 class Punkt {
 protected:
-    int x,y;
+    int x, y;
 
 public:
     Punkt();
+
     Punkt(int x, int y);
 
 
