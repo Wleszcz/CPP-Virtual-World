@@ -13,7 +13,6 @@
 
 using namespace std;
 
-
 Swiat::Swiat(int x, int y) {
     plansza = new Plansza(x, y);
     Narrator = NARRATOR;

@@ -41,7 +41,6 @@ private:
     int y;
     Organizm ***pola;
 
-
 };
 
 #endif //UNTITLED_PLANSZA_H

@@ -29,7 +29,7 @@ public:
     Swiat(int x, int y, int tura, int iloscTur);
 
     Plansza *plansza;
-    bool Koniec;
+    bool Koniec=false;
     bool Narrator;
 
     void rysujSwiat();

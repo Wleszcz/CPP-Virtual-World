@@ -21,7 +21,7 @@
 #include "fstream"
 
 #define X_SWIATA 150
-#define Y_SWIATA 30
+#define Y_SWIATA 20
 #define MAX_LICZBA_ORGANIZMOW_START 11
 
 
