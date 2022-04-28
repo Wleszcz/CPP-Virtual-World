@@ -9,6 +9,7 @@
 #define LISTA_ZWIERZAT false
 #define STATYSTYKI true
 #define NARRATOR true
+#define MARGINES 0
 
 using namespace std;
 
@@ -25,6 +26,10 @@ Swiat::Swiat(int x, int y,int tura,int iloscTur) {
 }
 
 void Swiat::rysujSwiat() {
+    for (int i = 0; i < MARGINES; ++i) {
+        cout<<endl;
+    }
+
     if(LISTA_ORGANIZMOW){listaOrganizmow();}
     if(LISTA_ZWIERZAT){listaZwierzat();}
     if (STATYSTYKI){statystyki();}

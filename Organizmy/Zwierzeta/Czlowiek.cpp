@@ -74,8 +74,19 @@ void Czlowiek::akcja() {
     else if(c=='d'){
         x++;
     }
-    else if(c=='q'){
+    else if(c=='u'){
         Umiejetnosc();
+    }
+    else if(c=='q'){
+        std::cout<<"Czy Zakonczyc Gre ?  (T/N) "<<std::endl;
+        char kom;
+        cin>>kom;
+        if(kom=='t' || kom =='T'){
+            swiat->Koniec=true;
+        }
+        else if(kom=='n' || kom =='N'){
+            this->akcja();
+        }
     }
     else if (c=='z'){
         swiat->zapiszSwiat();
@@ -98,14 +109,19 @@ void Czlowiek::umrzyj() {
     else if(kom=='n' || kom =='N'){
         swiat->Koniec=true;
     }
+
 }
 
 void Czlowiek::Umiejetnosc() {
-    if(!uzytoUmiejstnosc && sila <= 10){
-    umiejetnoscTrwa= true;
-    uzytoUmiejstnosc=true;
-    cout<<"UZYTO UMIEJETNOSCI"<<endl;
-        sila = 10;
+    if(sila <= 10){
+        if(!uzytoUmiejstnosc){
+            umiejetnoscTrwa= true;
+            uzytoUmiejstnosc=true;
+            cout<<"UZYTO UMIEJETNOSCI"<<endl;
+            sila = 10+1;
+        }
+        cout<<"Umiejetnosc jest juz wykorzystana"<<endl;
+        this->akcja();
     }
 }
 

@@ -20,75 +20,33 @@
 #include <thread>
 #include "fstream"
 
-#define X_SWIATA 60
-#define Y_SWIATA 20
+#define X_SWIATA 150
+#define Y_SWIATA 30
 #define MAX_LICZBA_ORGANIZMOW_START 11
 
-int test0(Swiat* swiat);       //roslinnosc
-int test1(Swiat* swiat);       //zwierzeta
-int test2(Swiat* swiat);
-int test3(Swiat* swiat);
+
+int test0(Swiat* swiat);
+int NowaLosowaGra(Swiat *swiat) ;
 void wait(int czas);
+bool wczytanieZapisu();
+
 
 using namespace std;
 
-bool wczytanieZapisu();
+
 
 int main() {
     std::srand(std::time(nullptr));
 
-
-
-    Swiat swiat(X_SWIATA, Y_SWIATA);
-
     if (!wczytanieZapisu()){
-
-        if (
-                test1(&swiat) != 0) {
-
-            return 0;
+            Swiat swiat(X_SWIATA, Y_SWIATA);
+            if (NowaLosowaGra(&swiat) != 0) {
+                return 0;
         }
-
-
-        swiat.wykonajTure();
-
     }
 }
 
-
-int test0(Swiat(*swiat)) {
-
-    swiat->zmienIloscTur();
-    swiat->dodajOrganizm(new Czlowiek(swiat, 15, 15));
-    swiat->dodajOrganizm(new Owca(swiat, 20, 2));
-    swiat->dodajOrganizm(new Owca(swiat, 22, 1));
-    swiat->dodajOrganizm(new Wilk(swiat, 17, 17));
-    swiat->dodajOrganizm(new Wilk(swiat, 18, 16));
-
-    swiat->dodajOrganizm(new Trawa(swiat, 9, 9));
-    swiat->dodajOrganizm(new Lis(swiat, 14, 15));
-    swiat->dodajOrganizm(new Lis(swiat, 13, 15));
-    swiat->dodajOrganizm(new Guarana(swiat, 7, 4));
-    swiat->dodajOrganizm(new WilczeJagody(swiat, 10, 4));
-
-    swiat->dodajOrganizm(new Antylopa(swiat,40,17));
-    swiat->dodajOrganizm(new Antylopa(swiat,42,16));
-
-    swiat->dodajOrganizm(new Zolw(swiat,30,16));
-    swiat->dodajOrganizm(new Zolw(swiat,32,16));
-
-    for (int i = 0; i < swiat->GetIloscTur()-1; ++i) {
-        if (swiat->Koniec != 0) {
-            return 1;
-        }
-        swiat->wykonajTure();
-        wait(200);
-    }
-    return 0;
-
-}
-
-int test1(Swiat *swiat){
+int NowaLosowaGra(Swiat *swiat){
     swiat->zmienIloscTur();
 
     vector <Organizm*> organizmy {new BarszczSosnowskiego(swiat),new Guarana(swiat), new Mlecz(swiat),
@@ -111,41 +69,12 @@ int test1(Swiat *swiat){
     swiat->dodajOrganizm((new Czlowiek(swiat))->Konstuktor(x,y));
 
     for (int i = 0; i < swiat->GetIloscTur()-1; i++) {
-
+        wait(200);
         if(swiat->Koniec!=0){
             return 1;
         }
         swiat->wykonajTure();
     }
-    return 0;
-}
-
-int test2(Swiat *swiat){
-
-    swiat->zmienIloscTur();
-    for (int i = -2; i <=2; i++) {
-        for (int j = -2; j <= 2; j++) {
-            if(!((i>-2&&i<2)&&(j>-2&&j<2))) {
-                swiat->dodajOrganizm(new Wilk(swiat, 9 +i, 9 + j));
-            }
-        }
-    }
-
-    Zwierze* wilg=new Antylopa(swiat, 9, 9);
-    swiat->dodajOrganizm(wilg);
-
-    for (int i = 0; i < swiat->GetIloscTur(); ++i) {
-
-        if(swiat->Koniec!=0){
-            return 1;
-        }
-    }
-    return 0;
-}
-
-
-int test3(Swiat *swiat){
-
     return 0;
 }
 
@@ -228,6 +157,7 @@ bool wczytanieZapisu() {
                 else if(typ=="Wilcze Jagody"){
                     swiat.dodajOrganizm(new WilczeJagody(&swiat,x,y,wiek,sila));}
             }
+            ZAPIS.close();
             swiat.rysujSwiat();
 
             for (int i = tura; i < iloscTur; ++i) {
@@ -248,4 +178,39 @@ void wait(int czas) {
         std::chrono::milliseconds timespan(czas);
         std::this_thread::sleep_for(timespan);
     };
+
+
+
+int test0(Swiat(*swiat)) {
+/*
+    swiat->zmienIloscTur();
+    swiat->dodajOrganizm(new Czlowiek(swiat, 15, 15));
+    swiat->dodajOrganizm(new Owca(swiat, 20, 2));
+    swiat->dodajOrganizm(new Owca(swiat, 22, 1));
+    swiat->dodajOrganizm(new Wilk(swiat, 17, 17));
+    swiat->dodajOrganizm(new Wilk(swiat, 18, 16));
+
+    swiat->dodajOrganizm(new Trawa(swiat, 9, 9));
+    swiat->dodajOrganizm(new Lis(swiat, 14, 15));
+    swiat->dodajOrganizm(new Lis(swiat, 13, 15));
+    swiat->dodajOrganizm(new Guarana(swiat, 7, 4));
+    swiat->dodajOrganizm(new WilczeJagody(swiat, 10, 4));
+
+    swiat->dodajOrganizm(new Antylopa(swiat,40,17));
+    swiat->dodajOrganizm(new Antylopa(swiat,42,16));
+
+    swiat->dodajOrganizm(new Zolw(swiat,30,16));
+    swiat->dodajOrganizm(new Zolw(swiat,32,16));
+
+    for (int i = 0; i < swiat->GetIloscTur()-1; ++i) {
+        if (swiat->Koniec != 0) {
+            return 1;
+        }
+        swiat->wykonajTure();
+        wait(200);
+    }
+    return 0;
+ */
+}
+
 

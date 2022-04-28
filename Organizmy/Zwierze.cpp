@@ -21,7 +21,7 @@ void Zwierze::kolizja(Organizm *organizm) {
             if (getSila() > organizm->getSila()) {
 
                 if(swiat->Narrator) {
-                    std::cout << organizm->getY() << " zostal zjedzony przez " << typ << std::endl;
+                    std::cout << organizm->getTyp() << " zostal zjedzony przez " << typ << std::endl;
                 }
                 organizm->umrzyj();
             } else if (getSila() < organizm->getSila()) {
