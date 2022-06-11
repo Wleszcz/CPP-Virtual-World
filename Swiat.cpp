@@ -52,7 +52,9 @@ Swiat::wykonajTure() {                              //Glowny mechanizm rozgrywan
             organizmy[i]->Gotowy(true);
 
             if (Koniec) {
+
                 return 1;
+
             }
         }
     }
@@ -60,6 +62,7 @@ Swiat::wykonajTure() {                              //Glowny mechanizm rozgrywan
     rysujSwiat();
 
     return 0;
+    usunMartwe();
 }
 
 void Swiat::dodajOrganizm(
@@ -144,7 +147,7 @@ void Swiat::usunMartwe() {
     }
 }
 
-bool Swiat::zapiszSwiat() {
+bool Swiat::zapiszSwiat() const {
     std::ofstream ZAPIS;
 
 
@@ -186,6 +189,12 @@ void Swiat::zmienIloscTur() {
 
 int Swiat::GetIloscTur() const {
     return iloscTur;
+}
+void Swiat::UsunWszystko(){
+    int ilosc=organizmy.size();
+    for (int i = 0; i < ilosc; ++i) {
+        organizmy.pop_back();
+    }
 }
 
 

@@ -1,6 +1,7 @@
 //
 // Created by wikto on 12.04.2022.
 //
+#define MAX 20
 
 #include "Zwierze.h"
 
@@ -56,7 +57,7 @@ bool Zwierze::polaObokZajete() {
 void Zwierze::rozmnozSie() {
     int Kx, Ky, i = 0;
 
-    while (i < 20) {
+    while (i < MAX) {
         Punkt *pole = losowePoleObok();
         int x = pole->getX();
         int y = pole->getY();

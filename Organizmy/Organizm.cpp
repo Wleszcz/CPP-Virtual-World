@@ -4,6 +4,7 @@
 
 #include "Organizm.h"
 #include "../Punkt.h"
+#define ZASIEG 3
 
 int Organizm::getX() {
     return polozenie->getX();
@@ -66,7 +67,7 @@ void Organizm::ruch(int x, int y) {
 
 
 void Organizm::BonusSila() {
-    sila = sila * 3;
+    sila = sila + 3;
 }
 
 std::string Organizm::getTyp() {
@@ -76,8 +77,8 @@ std::string Organizm::getTyp() {
 Punkt *Organizm::losowePoleObok() {
     int xK, yK;
     while (true) {
-        int x1 = rand() % 3;
-        int y1 = rand() % 3;
+        int x1 = rand() % ZASIEG;
+        int y1 = rand() % ZASIEG;
 
         int x = getX() - 1 + x1;
         int y = getY() - 1 + y1;

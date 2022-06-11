@@ -20,7 +20,8 @@
 #include <thread>
 #include "fstream"
 
-#define X_SWIATA 150
+#define CZAS 200
+#define X_SWIATA 100
 #define Y_SWIATA 20
 #define MAX_LICZBA_ORGANIZMOW_START 11
 
@@ -71,13 +72,19 @@ int NowaLosowaGra(Swiat *swiat) {
     swiat->dodajOrganizm((new Czlowiek(swiat))->Konstuktor(x, y));
 
     for (int i = 0; i < swiat->GetIloscTur() - 1; i++) {
-        wait(200);
-        if (swiat->Koniec != 0) {
+        //wait(CZAS);
+        if (!swiat->Koniec) {
+            swiat->wykonajTure();
+
+        }
+        else{
             return 1;
         }
-        swiat->wykonajTure();
+
     }
+
     return 0;
+
 }
 
 
@@ -208,9 +215,9 @@ int test0(Swiat(*swiat)) {
         }
         swiat->wykonajTure();
         wait(200);
-    }
+    }*/
     return 0;
- */
+
 }
 
 

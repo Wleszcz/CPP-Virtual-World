@@ -4,6 +4,7 @@
 // Created by wikto on 12.04.2022.
 //
 #include "Roslina.h"
+#define ZASIEG 4
 
 void Roslina::akcja() {
     rozmnozSie();
@@ -25,7 +26,7 @@ void Roslina::kolizja(Organizm *organizm) {
 }
 
 void Roslina::rozmnozSie() {
-    int szansa = rand() % 4;
+    int szansa = rand() % ZASIEG;
     if (this->wiek != 0 && szansa == 0) {
         Punkt *pole = losowePoleObok();
         int x = pole->getX();

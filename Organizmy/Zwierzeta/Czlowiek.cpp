@@ -6,6 +6,7 @@
 #include "Czlowiek.h"
 
 #define SILA 5
+#define SILA_UMIEJETNOSC 10
 
 using namespace std;
 
@@ -104,12 +105,12 @@ void Czlowiek::umrzyj() {
 }
 
 void Czlowiek::Umiejetnosc() {
-    if (sila <= 10) {
+    if (sila <= SILA_UMIEJETNOSC) {
         if (!uzytoUmiejstnosc) {
             umiejetnoscTrwa = true;
             uzytoUmiejstnosc = true;
             cout << "UZYTO UMIEJETNOSCI" << endl;
-            sila = 10 + 1;
+            sila = SILA_UMIEJETNOSC+ 1;
         }
         cout << "Umiejetnosc jest juz wykorzystana" << endl;
         this->akcja();

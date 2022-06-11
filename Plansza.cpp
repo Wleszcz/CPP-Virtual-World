@@ -110,3 +110,10 @@ int Plansza::GetY() {
     return y;
 }
 
+Plansza::~Plansza() {
+    for (int i = 0; i < x; ++i) {
+        delete(pola[i]);
+    }
+    delete(pola);
+}
+

@@ -38,7 +38,6 @@ void Zolw::kolizja(Organizm *organizm) {
 
 Organizm *Zolw::Konstuktor(int x, int y) {
     return new Zolw(swiat, x, y);
-
 }
 
 void Zolw::akcja() {

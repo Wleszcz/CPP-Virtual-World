@@ -35,6 +35,8 @@ public:
 
     int GetY();
 
+    virtual ~Plansza();
+
 
 private:
     int x;

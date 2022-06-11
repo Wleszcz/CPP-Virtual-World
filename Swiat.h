@@ -52,10 +52,11 @@ public:
 
     void usunMartwe();
 
-    bool zapiszSwiat();
+    bool zapiszSwiat() const;
 
     void statystyki();
 
+    void UsunWszystko();
 };
 
 #endif //UNTITLED_SWIAT_H
